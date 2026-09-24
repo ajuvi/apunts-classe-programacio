@@ -180,7 +180,7 @@ Combinant la **divisió entera** (`/`) i el **residu** (`%`) per 10, 100, 1000..
 
 Tenim una data guardada com un sol número amb el format `AAAAMMDD`.
 
-<details>
+<details markdown="1">
 <summary>Mostra la solució</summary>
 
 ```csharp
@@ -203,7 +203,7 @@ Console.WriteLine($"Dia {dia}, mes {mes}, any {any}");
 
 Anem **retallant** el número: agafem l'última xifra amb `% 10` i després la traiem amb `/ 10`.
 
-<details>
+<details markdown="1">
 <summary>Mostra la solució</summary>
 
 ```csharp
@@ -306,7 +306,7 @@ Fes un programa que generi **dues notes aleatòries** entre `0` i `10` i mostri 
 > Mitjana: 7.5
 ```
 
-<details>
+<details markdown="1">
 <summary>Mostra la solució</summary>
 
 ```csharp
@@ -338,7 +338,7 @@ Fes un programa que generi una **matrícula de cotxe aleatòria**, la guardi en 
 > La teva matrícula és: 4821 BKM
 ```
 
-<details>
+<details markdown="1">
 <summary>Mostra la solució</summary>
 
 ```csharp
