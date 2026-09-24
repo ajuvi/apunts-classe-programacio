@@ -174,7 +174,7 @@ Combinant la **divisió entera** (`/`) i el **residu** (`%`) per 10, 100, 1000..
 | `1234 / 10`        | `123`    |
 | `1234 % 1000`      | `234`    |
 
-### Exercici: separar una data
+### 📝 Exercici: separar una data
 
 Tenim una data guardada com un sol número amb el format `YYYYMMDD`.
 
@@ -197,7 +197,7 @@ Console.WriteLine($"Dia {dia}, mes {mes}, any {any}");
 
 </details>
 
-### Exercici: capgirar un número de 3 xifres
+### 📝 Exercici: capgirar un número de 3 xifres
 
 Anem **retallant** el número: agafem l'última xifra amb `% 10` i després la traiem amb `/ 10`.
 
@@ -294,7 +294,7 @@ char minuscula = (char)rnd.Next('a', 'z' + 1);   // de 'a' a 'z'
 char digit     = (char)rnd.Next('0', '9' + 1);   // de '0' a '9'
 ```
 
-### Exercici: notes aleatòries
+### 📝 Exercici: notes aleatòries
 
 Fes un programa que generi **dues notes aleatòries** entre `0` i `10` i mostri les notes i la **mitjana**.
 
@@ -324,7 +324,7 @@ Console.WriteLine($"Mitjana: {mitjana}");
 
 </details>
 
-### Exercici: matrícula aleatòria
+### 📝 Exercici: matrícula aleatòria
 
 Fes un programa que generi una **matrícula de cotxe aleatòria**, la guardi en una variable `string` i la mostri. El format és `0000 AAA`:
 
