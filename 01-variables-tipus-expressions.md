@@ -176,7 +176,17 @@ Combinant la **divisió entera** (`/`) i el **residu** (`%`) per 10, 100, 1000..
 
 ### 📝 Exercici: separar una data
 
-Tenim una data guardada com un sol número amb el format `YYYYMMDD`.
+Tenim una data guardada com un sol número amb el format `YYYYMMDD`. Mostra el dia, el mes i l'any per separat.
+
+```csharp
+int data = 20260924;
+
+int any = ...;
+int mes = ...;
+int dia = ...;
+
+Console.WriteLine($"Dia {dia}, mes {mes}, any {any}");
+```
 
 <details markdown="1">
 <summary markdown="span">Mostra la solució</summary>
@@ -199,7 +209,29 @@ Console.WriteLine($"Dia {dia}, mes {mes}, any {any}");
 
 ### 📝 Exercici: capgirar un número de 3 xifres
 
+Fes un programa que capgiri un número de 3 xifres. Per exemple, `472` → `274`.
+
 Anem **retallant** el número: agafem l'última xifra amb `% 10` i després la traiem amb `/ 10`.
+
+```csharp
+int numero = 472;
+
+int unitats = ...;
+numero = ...;
+
+int desenes = ...;
+numero = ...;
+
+int centenes = ...;
+
+int capgirat = ...;
+
+Console.WriteLine($"El número capgirat és {capgirat}");
+```
+
+```text
+> El número capgirat és 274
+```
 
 <details markdown="1">
 <summary markdown="span">Mostra la solució</summary>
@@ -218,10 +250,6 @@ int centenes = numero;           // 4
 int capgirat = unitats * 100 + desenes * 10 + centenes;   // 274
 
 Console.WriteLine($"El número capgirat és {capgirat}");
-```
-
-```text
-> El número capgirat és 274
 ```
 
 </details>
@@ -297,6 +325,19 @@ char digit     = (char)rnd.Next('0', '9' + 1);   // de '0' a '9'
 ### 📝 Exercici: notes aleatòries
 
 Fes un programa que generi **dues notes aleatòries** entre `0` i `10` i mostri les notes i la **mitjana**.
+
+```csharp
+Random rnd = new Random();
+
+int nota1 = ...;
+int nota2 = ...;
+
+double mitjana = ...;
+
+Console.WriteLine($"Nota 1: {nota1}");
+Console.WriteLine($"Nota 2: {nota2}");
+Console.WriteLine($"Mitjana: {mitjana}");
+```
 
 ```text
 > Nota 1: 6
