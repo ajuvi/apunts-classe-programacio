@@ -2,7 +2,7 @@
 layout: default
 ---
 
-> Disposeu del següent canva que explica les funcions en C#.
+> Disposeu del següent canva que explica les funcions en C#.  
 > https://canva.link/p4g78nhmggbmiop
 
 # Funcions
@@ -11,13 +11,13 @@ layout: default
 
 Una funció **rep uns paràmetres** (pot tenir-ne diversos) i **sempre retorna un valor**.
 
-![alt text](image.png)
+<img src="image.png" alt="Funció Max" width="400">
 
 ## Implementar una funció
 
 Exemple: una funció `Max` que rep dos `double` i retorna el més gran.
 
-![alt text](image-1.png)
+<img src="image-1.png" alt="Funció Max" width="400">
 
 ```csharp
 public static double Max(double n1, double n2)
@@ -57,7 +57,7 @@ public static double Max(double n1, double n2)
 
 Un cop implementada i comentada, una funció es pot utilitzar **sense conèixer els detalls interns**: només cal saber els pràmetres què rep i què retorna.
 
-![Caixa negra: entrada → funció → sortida](caixa-negra.png)
+<img src="caixa-negra.png" alt="Caixa negra: entrada → funció → sortida" width="400">
 
 ## Crida a una funció (utilitzar una funció) 
 
