@@ -176,10 +176,10 @@ Combinant la **divisió entera** (`/`) i el **residu** (`%`) per 10, 100, 1000..
 
 ### Exercici: separar una data
 
-Tenim una data guardada com un sol número amb el format `AAAAMMDD`.
+Tenim una data guardada com un sol número amb el format `YYYYMMDD`.
 
 <details markdown="1">
-<summary>Mostra la solució</summary>
+<summary markdown="span">Mostra la solució</summary>
 
 ```csharp
 int data = 20260924;
@@ -202,7 +202,7 @@ Console.WriteLine($"Dia {dia}, mes {mes}, any {any}");
 Anem **retallant** el número: agafem l'última xifra amb `% 10` i després la traiem amb `/ 10`.
 
 <details markdown="1">
-<summary>Mostra la solució</summary>
+<summary markdown="span">Mostra la solució</summary>
 
 ```csharp
 int numero = 472;
@@ -305,7 +305,7 @@ Fes un programa que generi **dues notes aleatòries** entre `0` i `10` i mostri 
 ```
 
 <details markdown="1">
-<summary>Mostra la solució</summary>
+<summary markdown="span">Mostra la solució</summary>
 
 ```csharp
 Random rnd = new Random();
@@ -337,7 +337,7 @@ Fes un programa que generi una **matrícula de cotxe aleatòria**, la guardi en 
 ```
 
 <details markdown="1">
-<summary>Mostra la solució</summary>
+<summary markdown="span">Mostra la solució</summary>
 
 ```csharp
 Random rnd = new Random();
