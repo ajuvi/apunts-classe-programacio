@@ -357,7 +357,7 @@ Console.WriteLine($"Mitjana: {mitjana}");
 
 ### 📝 Exercici: matrícula aleatòria
 
-Fes un programa que generi una **matrícula de cotxe aleatòria**, la guardi en una variable `string` i la mostri. El format és `0000 AAA`:
+Fes un programa que generi una **matrícula de cotxe aleatòria** i la mostri. El format de la matrícula ha de ser `0000 AAA`:
 
 - 4 dígits (de `0` a `9`)
 - un espai
