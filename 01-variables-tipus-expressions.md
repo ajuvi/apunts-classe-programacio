@@ -319,3 +319,44 @@ Console.WriteLine($"Mitjana: {mitjana}");
 > Dividim per `2.0` i no per `2` perquè la divisió no sigui entera.
 
 </details>
+
+### Exercici: matrícula aleatòria
+
+Fes un programa que generi una **matrícula de cotxe aleatòria**, la guardi en una variable `string` i la mostri. El format és `0000 AAA`:
+
+- 4 dígits (de `0` a `9`)
+- un espai
+- 3 lletres majúscules (de `A` a `Z`)
+
+```text
+> La teva matrícula és: 4821 BKM
+```
+
+<details>
+<summary>Mostra la solució</summary>
+
+```csharp
+Random rnd = new Random();
+
+string matricula = "";
+
+// 4 dígits
+matricula = matricula + rnd.Next(0, 10);
+matricula = matricula + rnd.Next(0, 10);
+matricula = matricula + rnd.Next(0, 10);
+matricula = matricula + rnd.Next(0, 10);
+
+// espai
+matricula = matricula + " ";
+
+// 3 lletres
+matricula = matricula + (char)rnd.Next('A', 'Z' + 1);
+matricula = matricula + (char)rnd.Next('A', 'Z' + 1);
+matricula = matricula + (char)rnd.Next('A', 'Z' + 1);
+
+Console.WriteLine($"La teva matrícula és: {matricula}");
+```
+
+> Comencem amb `matricula = ""` (cadena buida) i hi anem **enganxant** cada dígit i cada lletra amb `+`.
+
+</details>
