@@ -217,11 +217,7 @@ Anem **retallant** el número: agafem l'última xifra amb `% 10` i després la t
 int numero = 472;
 
 int unitats = ...;
-numero = ...;
-
 int desenes = ...;
-numero = ...;
-
 int centenes = ...;
 
 int capgirat = ...;
@@ -240,12 +236,8 @@ Console.WriteLine($"El número capgirat és {capgirat}");
 int numero = 472;
 
 int unitats = numero % 10;       // 2
-numero = numero / 10;            // 47
-
-int desenes = numero % 10;       // 7
-numero = numero / 10;            // 4
-
-int centenes = numero;           // 4
+int desenes = numero /10 % 10;   // 7
+int centenes = numero /100;      // 4
 
 int capgirat = unitats * 100 + desenes * 10 + centenes;   // 274
 
