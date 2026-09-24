@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 [← Tornar a l'índex](index.md)
 
 # Variables, tipus i expressions
