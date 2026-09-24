@@ -375,25 +375,15 @@ Fes un programa que generi una **matrícula de cotxe aleatòria**, la guardi en 
 ```csharp
 Random rnd = new Random();
 
-string matricula = "";
-
 // 4 dígits
-matricula = matricula + rnd.Next(0, 10);
-matricula = matricula + rnd.Next(0, 10);
-matricula = matricula + rnd.Next(0, 10);
-matricula = matricula + rnd.Next(0, 10);
-
-// espai
-matricula = matricula + " ";
+numero = rnd.Next(0, 10000);
 
 // 3 lletres
-matricula = matricula + (char)rnd.Next('A', 'Z' + 1);
-matricula = matricula + (char)rnd.Next('A', 'Z' + 1);
-matricula = matricula + (char)rnd.Next('A', 'Z' + 1);
+char  c1 = (char)rnd.Next('A', 'Z' + 1);
+char  c2 = (char)rnd.Next('A', 'Z' + 1);
+char  c3 = (char)rnd.Next('A', 'Z' + 1);
 
-Console.WriteLine($"La teva matrícula és: {matricula}");
+Console.WriteLine($"La teva matrícula és: {numero:0000} {c1}{c2}{c3}");
 ```
-
-> Comencem amb `matricula = ""` (cadena buida) i hi anem **enganxant** cada dígit i cada lletra amb `+`.
 
 </details>
