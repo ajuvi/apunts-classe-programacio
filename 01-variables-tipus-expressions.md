@@ -211,8 +211,6 @@ Console.WriteLine($"Dia {dia}, mes {mes}, any {any}");
 
 Fes un programa que capgiri un número de 3 xifres. Per exemple, `472` → `274`.
 
-Anem **retallant** el número: agafem l'última xifra amb `% 10` i després la traiem amb `/ 10`.
-
 ```csharp
 int numero = 472;
 
