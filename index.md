@@ -1,3 +1,7 @@
+---
+layout: default
+---
+
 # Apunts de programació
 
 ## Temes
