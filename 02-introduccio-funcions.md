@@ -5,7 +5,7 @@ layout: default
 > Pots accedir al següent enllaç on s'explica de manera visual què és una funció.  
 > [https://canva.link/p4g78nhmggbmiop](https://canva.link/p4g78nhmggbmiop)
 
-# Funcions
+# Introducció a les funcions
 
 ## Què és una funció?
 
@@ -37,10 +37,10 @@ public static double Max(double n1, double n2)
 El nom de les funcions en C# s'escriu en **PascalCase**: com el *camelCase*, però amb la primera lletra també en majúscula.
 
 Exemples de noms de funcions:  
-* Max
-* Min
-* AreaCercle
-* VolumEsfera
+* Max(...)
+* Min(...)
+* AreaCercle(...)
+* VolumEsfera(...)
 
 ## Comentar les funcions
 
