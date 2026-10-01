@@ -1,6 +1,12 @@
 # Created by https://www.toptal.com/developers/gitignore/api/python,web
 # Edit at https://www.toptal.com/developers/gitignore?templates=python,web
 
+### Jekyll ###
+_site/
+.jekyll-cache/
+.sass-cache/
+Gemfile.lock
+
 ### Python ###
 # Byte-compiled / optimized / DLL files
 __pycache__/
