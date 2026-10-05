@@ -307,14 +307,14 @@ public static void Main(string[] args)
 
 Implementa una funció `Qualificacio` que rebi una nota entre 0 i 10 i retorni la qualificació en format text:
 
-| Nota          | Qualificació      |
-|---------------|-------------------|
-| menys de 5    | Suspès            |
-| de 5 a 6,99   | Aprovat           |
-| de 7 a 8,99   | Notable           |
-| de 9 a 9,99   | Excel·lent        |
-| 10            | Matrícula d'honor |
-| fora de 0-10  | Nota no vàlida    |
+| Nota            | Qualificació      |
+|-----------------|-------------------|
+| [0, 5)          | Suspès            |
+| [5, 7)          | Aprovat           |
+| [7, 9)          | Notable           |
+| [9, 10)         | Excel·lent        |
+| 10              | Matrícula d'honor |
+| < 0 o > 10      | Nota no vàlida    |
 
 ```csharp
 public static void Main(string[] args)
