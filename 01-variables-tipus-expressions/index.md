@@ -6,6 +6,8 @@ layout: default
 
 ## Tipus bàsics
 
+Cada dada que fa servir un programa té un **tipus**. El tipus indica quins valors pot prendre la dada i quines operacions s'hi poden fer. Un **literal** és un valor escrit directament al codi.
+
 | Tipus  | Literals |
 |--------|----------|
 | int    | `3` &nbsp;&nbsp;&nbsp; `6` &nbsp;&nbsp;&nbsp; `-10` &nbsp;&nbsp;&nbsp; `0` |
@@ -15,6 +17,10 @@ layout: default
 | bool   | `True` &nbsp;&nbsp;&nbsp; `False` |
 
 ## Variables (declaració i inicialització)
+
+Una **variable** és un espai de memòria amb un nom on guardem una dada que pot canviar mentre el programa s'executa. Cada variable té un **tipus**, que indica quina mena de valors pot guardar.
+
+En C#, els noms de variables s'escriuen en (**camelCase**)[https://stringcase.org/cases/camel/].
 
 ```csharp
 string? elTeuNom;
@@ -27,6 +33,8 @@ char grupClasse;
 
 ## Assignació
 
+**Assignar** vol dir guardar un valor dins d'una variable que ja està declarada. Fem servir l'operador `=`.
+
 ```csharp
 elTeuNom = "Manel";
 temperatura = 23.20;
@@ -35,12 +43,18 @@ grupClasse = 'A';
 
 ## Constants
 
+Una **constant** és com una variable, però el seu valor **no pot canviar** mentre s'executa el programa. Es declara amb la paraula `const` davant del tipus i s'ha d'inicialitzar en el mateix moment de declarar-la.
+
+Els noms de constants s'escriuen en format (**CONSTANT_CASE**)[https://stringcase.org/cases/constant/].
+
 ```csharp
 const double PI = 3.1416;
 const double TEMPERATURA_MAXIMA = 42.5;
 ```
 
 ## Llegir de teclat
+
+Per demanar una dada a l'usuari fem servir `Console.ReadLine()`. Aquesta instrucció espera que l'usuari escrigui un text i premi **Enter**, i retorna el que ha escrit com a `string`.
 
 ```csharp
 string elTeuNom;
@@ -70,7 +84,17 @@ Console.Write("ETS MAJOR D'EDAT? ");
 majorEdat = Convert.ToBoolean(Console.ReadLine());
 ```
 
-## Escriptura per pantalla
+## Escriure per pantalla
+
+Per mostrar text per pantalla tenim dues instruccions:
+
+- `Console.Write(...)` escriu el text i deixa el cursor **a la mateixa línia**. El que s'escrigui després apareixerà a continuació.
+- `Console.WriteLine(...)` escriu el text i fa un **salt de línia** al final. El que s'escrigui després apareixerà a la línia següent.
+
+Per combinar text i variables en un mateix missatge fem servir la **interpolació**:
+
+- Posem el símbol `$` just davant de les cometes.
+- Dins del text, escrivim entre claus `{ }` el nom de la variable o de l'expressió que volem mostrar.
 
 ```csharp
 Console.Write("COM ET DIUS? ");
@@ -95,6 +119,8 @@ Console.WriteLine($"2 + 2 = {2 + 2}");
 
 ## Operacions aritmètiques
 
+Els **operadors aritmètics** serveixen per fer càlculs amb nombres. Es poden fer servir amb literals, variables i constants.
+
 | Operador | Operació       | Exemple   | Resultat |
 |----------|----------------|-----------|----------|
 | `+`      | Suma           | `7 + 2`   | `9`      |
@@ -115,6 +141,8 @@ int residu = a % b;          // 1
 ```
 
 ### Ordre de les operacions
+
+Cada operador té una **prioritat**, i primer es fan les operacions de prioritat més alta. A la taula següent pots observar que els operadors `+` i `-` tenen menys prioritat que la resta.
 
 | Prioritat | Operadors         |
 |-----------|-------------------|

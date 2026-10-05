@@ -34,7 +34,7 @@ public static double Max(double n1, double n2)
 }
 ```
 
-El nom de les funcions en C# s'escriu en **PascalCase**: com el *camelCase*, però amb la primera lletra també en majúscula.
+El nom de les funcions en C# s'escriu en (**PascalCase**)[https://stringcase.org/cases/pascal/]: com el *camelCase*, però amb la primera lletra també en majúscula.
 
 Exemples de noms de funcions:  
 * Max(...)
