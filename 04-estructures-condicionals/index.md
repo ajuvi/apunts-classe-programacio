@@ -207,7 +207,7 @@ public static bool EsMajorEdat(int edat)
 
 ### 📝 Exercici: funció Qualificar
 
-Implementa una funció `Qualificar` que rebi una nota i retorni `"Aprovat"` si és 5 o més, i `"No assolit"` en cas contrari.
+Implementa una funció `Qualificar` que rebi una nota i retorni `"Assolit"` si és 5 o més, i `"No assolit"` en cas contrari.
 
 ```csharp
 public static void Main(string[] args)
@@ -218,7 +218,7 @@ public static void Main(string[] args)
 ```
 
 ```text
-> Un 7: Aprovat
+> Un 7: Assolit
 > Un 3: No assolit
 ```
 
@@ -231,7 +231,7 @@ public static string Qualificar(double nota)
     string resultat;
     if (nota >= 5)
     {
-        resultat = "Aprovat";
+        resultat = "Assolit";
     }
     else
     {
