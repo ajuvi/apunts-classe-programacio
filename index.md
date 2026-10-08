@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Apunts de programació
+# Materials de programació
 
 > [Porta retalls de programació](https://docs.google.com/document/d/10wdt3IFFdfforV4cYo2Qx3XjVF7AhRoi5DUaPRYLOOI/edit?usp=sharing)
 
