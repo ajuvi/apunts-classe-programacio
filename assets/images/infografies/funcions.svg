@@ -21,12 +21,12 @@
    inkscape:pageopacity="0.0"
    inkscape:pagecheckerboard="0"
    inkscape:deskcolor="#d1d1d1"
-   inkscape:zoom="1.3927928"
-   inkscape:cx="538.12743"
-   inkscape:cy="-87.2348"
+   inkscape:zoom="0.6963964"
+   inkscape:cx="833.57697"
+   inkscape:cy="407.09573"
    inkscape:window-width="1920"
    inkscape:window-height="991"
-   inkscape:window-x="-9"
+   inkscape:window-x="1911"
    inkscape:window-y="-9"
    inkscape:window-maximized="1"
    inkscape:current-layer="svg91" />
@@ -634,7 +634,7 @@
    x="416"
    y="119"
    text-anchor="middle"
-   id="text84">1 · variable de retorn</text>
+   id="text84">Declarar la variable de retorn</text>
     <rect
    x="300"
    y="294"
@@ -648,14 +648,14 @@
    x="416"
    y="311"
    text-anchor="middle"
-   id="text85">2 · un únic return al final</text>
+   id="text85">Retornar la variable de retorn</text>
     <text
    class="note"
    x="20"
    y="384"
-   id="text86">Declara una <tspan
+   id="text86">Es declara una <tspan
    style="font-weight:bold"
-   id="tspan94">variable de retorn</tspan> al principi que es retorna al final.</text>
+   id="tspan94">variable de retorn</tspan> al principi i es retorna al final.</text>
   </g>
 
   <!-- ===== Peu: qui fa què ===== -->
