@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Estructures condicionals
+# Estructures repetitiva
 
 Fins ara, els programes executaven les instruccions una darrere l'altra. Amb les **estructures condicionals**, el programa pot **triar quin camí segueix** segons si es compleix una **condició** o no.
 
@@ -485,6 +485,7 @@ public static string InfoTemperatura(double temperatura)
 ```
 
 </details>
+
 
 ## Estructura switch
 

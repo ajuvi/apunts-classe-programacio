@@ -20,7 +20,7 @@ Cada dada que fa servir un programa té un **tipus**. El tipus indica quins valo
 
 Una **variable** és un espai de memòria amb un nom on guardem una dada que pot canviar mentre el programa s'executa. Cada variable té un **tipus**, que indica quina mena de valors pot guardar.
 
-En C#, els noms de variables s'escriuen en (**camelCase**)[https://stringcase.org/cases/camel/].
+En C#, els noms de variables s'escriuen en [**camelCase**](https://stringcase.org/cases/camel/).
 
 ```csharp
 string? elTeuNom;
@@ -45,7 +45,7 @@ grupClasse = 'A';
 
 Una **constant** és com una variable, però el seu valor **no pot canviar** mentre s'executa el programa. Es declara amb la paraula `const` davant del tipus i s'ha d'inicialitzar en el mateix moment de declarar-la.
 
-Els noms de constants s'escriuen en format (**CONSTANT_CASE**)[https://stringcase.org/cases/constant/].
+Els noms de constants s'escriuen en format [**CONSTANT_CASE**](https://stringcase.org/cases/constant/).
 
 ```csharp
 const double PI = 3.1416;

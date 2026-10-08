@@ -17,28 +17,28 @@ Una funció **rep uns paràmetres** (pot tenir-ne diversos o cap) i **sempre ret
 
 ## Implementar una funció
 
-Exemple d'una funció `Max` que rep dos `double` i retorna el més gran.
+Exemple d'una funció `Maxim` que rep dos `double` i retorna el més gran.
 
 <img src="image-1.png" alt="Funció Max" width="400">
 
 ```csharp
-public static double Max(double n1, double n2)
+public static double Maxim(double n1, double n2)
 {
-    double maxim;
-    maxim = n1;
+    double max;
+    max = n1;
     if (n2 > n1)
     {
-        maxim = n2;
+        max = n2;
     }
-    return maxim;
+    return max;
 }
 ```
 
-El nom de les funcions en C# s'escriu en (**PascalCase**)[https://stringcase.org/cases/pascal/]: com el *camelCase*, però amb la primera lletra també en majúscula.
+El nom de les funcions en C# s'escriu en [**PascalCase**](https://stringcase.org/cases/pascal/): com el *camelCase*, però amb la primera lletra també en majúscula.
 
 Exemples de noms de funcions:  
-* Max(...)
-* Min(...)
+* Maxim(...)
+* Minim(...)
 * AreaCercle(...)
 * VolumEsfera(...)
 
@@ -53,7 +53,7 @@ Les funcions s'han de comentar perquè el programador sàpiga com utilitzar-les 
 /// <param name="n1">El primer nombre a comparar.</param>
 /// <param name="n2">El segon nombre a comparar.</param>
 /// <returns>El nombre més gran entre n1 i n2.</returns>
-public static double Max(double n1, double n2)
+public static double Maxim(double n1, double n2)
 {
     ...
 }
@@ -76,7 +76,7 @@ En aquest cas, la funció retorna un valor i aquest valor es mostra a pantalla.
 ```csharp
 public static void Main(string[] args)
 {
-    Console.WriteLine(Max(2, 5));
+    Console.WriteLine(Maxim(2, 5));
 }
 ```
 
@@ -94,7 +94,7 @@ public static void Main(string[] args)
     double a, b, c;
     a = 10;
     b = 9;
-    c = Max(b, a);
+    c = Maxim(b, a);
     Console.WriteLine(c);
 }
 ```
@@ -113,7 +113,7 @@ public static void Main(string[] args)
     double a, b;
     a = 10;
     b = 9;
-    Console.WriteLine(Max(a, b + 2));
+    Console.WriteLine(Maxim(a, b + 2));
 }
 ```
 
@@ -132,7 +132,7 @@ public static void Main(string[] args)
     a = 5;
     b = 6;
     c = 7;
-    Console.WriteLine(Max(Max(a, b), c));
+    Console.WriteLine(Maxim(Maxim(a, b), c));
 }
 ```
 
@@ -153,6 +153,8 @@ public static void Main(string[] args)
     Console.WriteLine(c);
 }
 ```
+
+> En aquest exemple utilitzem la funció `Max` de la llibreria `Math`.
 
 <details markdown="1">
 <summary markdown="span">Mostra la solució</summary>
