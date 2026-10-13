@@ -65,7 +65,7 @@ Per saber on s'acaben les dades, el fitxer té una **marca de fi**: un valor esp
 
 ### Una línia per dada (MARCA_FI = null)
 
-Al fitxer `numeros.txt`, la marca de fi és el **null**.
+Llegim el fitxer `numeros.txt` amb la marca de fi és el **null**.
 
 Programa que mostra quants números hi ha en un fitxer. El programa acaba quan es troba un null.
 
@@ -103,7 +103,7 @@ public static void Main(string[] args)
 
 ### Una línia per dada (MARCA_FI = 0)
 
-Al fitxer `numeros.txt`, la marca de fi és el **0**.
+Llegim el fitxer `numeros.txt` amb la marca de fi és el **0**.
 
 Programa que mostra quants números hi ha en un fitxer. El programa acaba quan es troba un 0.
 
