@@ -98,7 +98,7 @@ public static void Main(string[] args)
 ```
 
 ```text
-> Hi ha 4 números abans del 0
+> Hi ha 6 números abans del 0
 ```
 
 ### Una línia per dada (MARCA_FI = 0)
