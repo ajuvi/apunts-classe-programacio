@@ -11,7 +11,9 @@ layout: default
 1. [Variables, tipus i expressions](01-variables-tipus-expressions/)
 2. [Introducció a les funcions](02-introduccio-funcions/)
 3. [Expressions booleanes](03-expressions-booleanes/)
-3. [Estructures condicionals](04-estructures-condicionals/)
+4. [Estructures condicionals](04-estructures-condicionals/)
+5. [Estructures repetitives](05-estructures-repetitives/)
+6. [Recorreguts de fitxers](06-recorreguts-de-fitxers/)
 
 ## Infografies
 
