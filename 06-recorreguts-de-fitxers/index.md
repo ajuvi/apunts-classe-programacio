@@ -63,9 +63,7 @@ public static void Main(string[] args)
 
 Per saber on s'acaben les dades, el fitxer té una **marca de fi**: un valor especial que no és una dada. Al programa la guardem en una constant `MARCA_FI`.
 
-### Una línia per dada
-
-#### Amb MARCA_FI = null
+### Una línia per dada (MARCA_FI = null)
 
 Al fitxer `numeros.txt`, la marca de fi és el **null**.
 
@@ -103,8 +101,7 @@ public static void Main(string[] args)
 > Hi ha 4 números abans del 0
 ```
 
-
-#### Amb MARCA_FI = 0
+### Una línia per dada (MARCA_FI = 0)
 
 Al fitxer `numeros.txt`, la marca de fi és el **0**.
 
