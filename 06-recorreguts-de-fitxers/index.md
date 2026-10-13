@@ -65,32 +65,81 @@ Per saber on s'acaben les dades, el fitxer té una **marca de fi**: un valor esp
 
 ### Una línia per dada
 
+#### Amb MARCA_FI = null
+
+Al fitxer `numeros.txt`, la marca de fi és el **null**.
+
+Programa que mostra quants números hi ha en un fitxer. El programa acaba quan es troba un null.
+
+```csharp
+public static void Main(string[] args)
+{
+    const string MARCA_FI = null;
+    int contador = 0;
+
+    // obrim el fitxer i llegim la primera línia
+    StreamReader fitxer = new StreamReader("numeros.txt");  
+    string  linia = fitxer.ReadLine();           
+    
+    //mentre no trobem la marca
+    while (num != MARCA_FI)
+    {
+        // tractament
+        contador = contador + 1;
+
+        // llegir la següent línia
+        linia = fitxer.ReadLine();
+    }
+
+    // tanquem el fitxer
+    fitxer.Close();
+
+    // tractament final
+    Console.WriteLine($"Hi ha {positius} números abans del 0");
+}
+```
+
+```text
+> Hi ha 4 números abans del 0
+```
+
+
+#### Amb MARCA_FI = 0
+
 Al fitxer `numeros.txt`, la marca de fi és el **0**.
 
-Programa que escriu tots els números del fitxer:
+Programa que mostra quants números hi ha en un fitxer. El programa acaba quan es troba un 0.
 
 ```csharp
 public static void Main(string[] args)
 {
     const int MARCA_FI = 0;
-    StreamReader fitxer = new StreamReader("numeros.txt");
-    int num;
+    int contador = 0;
 
-    num = Convert.ToInt32(fitxer.ReadLine());       // 1. llegim el primer número
-    while (num != MARCA_FI)                         // 2. mentre no trobem la marca
+    // obrim el fitxer i llegim el primer número
+    StreamReader fitxer = new StreamReader("numeros.txt");  
+    int num = Convert.ToInt32(fitxer.ReadLine());
+
+    //mentre no trobem la marca
+    while (num != MARCA_FI)
     {
-        Console.WriteLine(num);
-        num = Convert.ToInt32(fitxer.ReadLine());   // 3. llegim el número següent
+        // tractament
+        contador = contador + 1;
+
+        // llegir el següent número
+        num = Convert.ToInt32(fitxer.ReadLine()); 
     }
+
+    //tancar el fitxer
     fitxer.Close();
+
+    // tractament final
+    Console.WriteLine($"Hi ha {positius} números abans del 0");
 }
 ```
 
 ```text
-> 42
-> 23
-> 12
-> 5
+> Hi ha 4 números abans del 0
 ```
 
 ### Dues línies per dada
