@@ -72,8 +72,9 @@ Programa que mostra quants números hi ha en un fitxer. El programa acaba quan e
 ```csharp
 public static void Main(string[] args)
 {
-    const string NOM_FITXER = "numeros.txt";
     const string MARCA_FI = null;
+    const string NOM_FITXER = "numeros.txt";
+ 
     int contador = 0;
 
     // obrim el fitxer i llegim la primera línia
@@ -106,13 +107,14 @@ public static void Main(string[] args)
 
 Llegim el fitxer `numeros.txt` amb la marca de fi és el **0**.
 
-Programa que mostra quants números hi ha en un fitxer. El programa acaba quan es troba un 0.
+Programa que mostra quants números enters que hi ha en un fitxer fins trobar un 0. El programa acaba quan es troba un 0.
 
 ```csharp
 public static void Main(string[] args)
 {
+    const int MARCA_FI = 0;    
     const string NOM_FITXER = "numeros.txt";
-    const int MARCA_FI = 0;
+
     int contador = 0;
 
     // obrim el fitxer i llegim el primer número
@@ -162,16 +164,22 @@ Programa que escriu cada alumne amb la seva nota:
 public static void Main(string[] args)
 {
     const string MARCA_FI = null;
-    StreamReader fitxer = new StreamReader("notes.txt");
-    string nom;
-    int nota;
+    const string NOM_FITXER = "notes.txt";
 
-    nom = fitxer.ReadLine();                        // 1. llegim el primer nom
-    while (nom != MARCA_FI)                         // 2. mentre no trobem la marca
+    int nota;
+    string nom;
+
+    // obrim el fitxer i llegim el primer nom
+    StreamReader fitxer = new StreamReader(NOM_FITXER);    
+    nom = fitxer.ReadLine();
+    while (nom != MARCA_FI)                         // mentre no trobem la marca
     {
-        nota = Convert.ToInt32(fitxer.ReadLine());  // llegim la segona línia: la nota
+        // tractament
+        nota = Convert.ToInt32(fitxer.ReadLine());  // llegim segona línia amb la nota
         Console.WriteLine($"{nom}: {nota}");
-        nom = fitxer.ReadLine();                    // 3. llegim el nom següent
+
+        // llegir el següent nom
+        nom = fitxer.ReadLine();                    // llegim el nom següent
     }
     fitxer.Close();
 }
@@ -200,18 +208,25 @@ Fes un programa que llegeixi el fitxer `numeros.txt` i escrigui la suma de tots 
 public static void Main(string[] args)
 {
     const int MARCA_FI = 0;
-    StreamReader fitxer = new StreamReader("numeros.txt");
+    const string NOM_FITXER = "numeros.txt";
+
     int num;
     int suma = 0;
 
+   // obrim el fitxer i llegim el primer número
+    StreamReader fitxer = new StreamReader(NOM_FITXER);
     num = Convert.ToInt32(fitxer.ReadLine());
     while (num != MARCA_FI)
     {
+        // tractament
         suma = suma + num;
+
+        // llegir seqüent número
         num = Convert.ToInt32(fitxer.ReadLine());
     }
     fitxer.Close();
 
+    // tractament final
     Console.WriteLine($"Suma: {suma}");
 }
 ```
@@ -233,11 +248,13 @@ Fes un programa que llegeixi **tot** el fitxer `numeros.txt` i compti quants nú
 public static void Main(string[] args)
 {
     const string MARCA_FI = null;
-    StreamReader fitxer = new StreamReader("numeros.txt");
+    const string NOM_FITXER = "numeros.txt";
+
     string linia;
     int num;
     int comptador = 0;
 
+    StreamReader fitxer = new StreamReader(NOM_FITXER);
     linia = fitxer.ReadLine();
     while (linia != MARCA_FI)
     {
@@ -246,6 +263,7 @@ public static void Main(string[] args)
         {
             comptador = comptador + 1;
         }
+
         linia = fitxer.ReadLine();
     }
     fitxer.Close();
@@ -272,10 +290,12 @@ Fes un programa que llegeixi el fitxer `notes.txt` i escrigui només el nom dels
 public static void Main(string[] args)
 {
     const string MARCA_FI = null;
-    StreamReader fitxer = new StreamReader("notes.txt");
+    const string NOM_FITXER = "notes.txt";
+
     string nom;
     int nota;
 
+    StreamReader fitxer = new StreamReader(NOM_FITXER);
     nom = fitxer.ReadLine();
     while (nom != MARCA_FI)
     {
@@ -284,6 +304,7 @@ public static void Main(string[] args)
         {
             Console.WriteLine(nom);
         }
+        
         nom = fitxer.ReadLine();
     }
     fitxer.Close();
