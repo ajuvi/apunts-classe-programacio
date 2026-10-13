@@ -80,7 +80,7 @@ public static void Main(string[] args)
     string  linia = fitxer.ReadLine();           
     
     //mentre no trobem la marca
-    while (num != MARCA_FI)
+    while (linia != MARCA_FI)
     {
         // tractament
         contador = contador + 1;
