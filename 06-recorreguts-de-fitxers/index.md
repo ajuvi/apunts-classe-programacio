@@ -72,11 +72,12 @@ Programa que mostra quants números hi ha en un fitxer. El programa acaba quan e
 ```csharp
 public static void Main(string[] args)
 {
+    const string NOM_FITXER = "numeros.txt";
     const string MARCA_FI = null;
     int contador = 0;
 
     // obrim el fitxer i llegim la primera línia
-    StreamReader fitxer = new StreamReader("numeros.txt");  
+    StreamReader fitxer = new StreamReader(NOM_FITXER);  
     string  linia = fitxer.ReadLine();           
     
     //mentre no trobem la marca
@@ -110,11 +111,12 @@ Programa que mostra quants números hi ha en un fitxer. El programa acaba quan e
 ```csharp
 public static void Main(string[] args)
 {
+    const string NOM_FITXER = "numeros.txt";
     const int MARCA_FI = 0;
     int contador = 0;
 
     // obrim el fitxer i llegim el primer número
-    StreamReader fitxer = new StreamReader("numeros.txt");  
+    StreamReader fitxer = new StreamReader(NOM_FITXER);  
     int num = Convert.ToInt32(fitxer.ReadLine());
 
     //mentre no trobem la marca
