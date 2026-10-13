@@ -93,7 +93,7 @@ public static void Main(string[] args)
     fitxer.Close();
 
     // tractament final
-    Console.WriteLine($"Hi ha {positius} números abans del 0");
+    Console.WriteLine($"Hi ha {contador} números abans del null");
 }
 ```
 
@@ -131,7 +131,7 @@ public static void Main(string[] args)
     fitxer.Close();
 
     // tractament final
-    Console.WriteLine($"Hi ha {positius} números abans del 0");
+    Console.WriteLine($"Hi ha {contador} números abans del 0");
 }
 ```
 
