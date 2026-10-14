@@ -2,7 +2,7 @@
 layout: default
 ---
 
-# Recorreguts de fitxers
+# Recorreguts de fitxers amb while
 
 Un **recorregut** consisteix a llegir un fitxer **de principi a una MARCA_FI**, una línia darrere l'altra, i fer alguna cosa amb cada dada: escriure-la, sumar-la, comptar-la...
 
@@ -304,7 +304,7 @@ public static void Main(string[] args)
         {
             Console.WriteLine(nom);
         }
-        
+
         nom = fitxer.ReadLine();
     }
     fitxer.Close();
