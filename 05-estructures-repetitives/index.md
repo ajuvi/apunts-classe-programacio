@@ -196,7 +196,7 @@ while (i > 0)
 > ITERACIÓ 1
 ```
 
-La variable **baixa**: comença a `MAX` i resta 1 a cada volta. Fa 10 voltes, igual que el bucle 1, però en ordre invers.
+La variable **baixa**: comença a 10 i resta 1 a cada volta. Fa 10 voltes, igual que el bucle 1, però en ordre invers.
 
 </details>
 
