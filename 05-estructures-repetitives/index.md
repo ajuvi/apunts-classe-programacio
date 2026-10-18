@@ -6,11 +6,6 @@ layout: default
 
 Fins ara, cada instrucció s'executava com a molt una vegada. Amb les **estructures repetitives**, el programa pot **repetir un bloc d'instruccions** mentre es compleixi una **condició**.
 
-**Índex**
-
-- [Estructura while](#estructura-while)
-- [Estructura for](#estructura-for)
-
 ## Estructura while
 
 El `while` comprova la condició **al principi**. Si és certa, executa el bloc i torna a comprovar la condició. Quan és falsa, surt del bucle i el programa continua.
