@@ -51,6 +51,114 @@ public static void Main(string[] args)
 
 > **Error habitual:** no posis `;` després de la condició. `if (x < 0);` és un `if` buit, i el bloc de sota s'executaria **sempre**.
 
+## Estructura if-else
+
+L'`if-else` tria **un camí entre dos**: si la condició és certa s'executa el bloc de l'`if`, i si és falsa s'executa el bloc de l'`else`. Sempre s'executa **un dels dos, i només un**.
+
+<img src="if-else.png" alt="Diagrama de flux de l'estructura if-else" width="350">
+
+```csharp
+if (condicio)
+{
+    // instruccions si la condició és certa
+}
+else
+{
+    // instruccions si la condició és falsa
+}
+```
+
+Exemple: funció `PreuEntrada` que calcula el preu d'una entrada de cinema. Els menors de 12 anys paguen **5 €** i la resta, **8 €**.
+
+```csharp
+public static int PreuEntrada(int edat)
+{
+    int preu;
+    if (edat < 12)
+    {
+        preu = 5;
+    }
+    else
+    {
+        preu = 8;
+    }
+    return preu;
+}
+
+public static void Main(string[] args)
+{
+    Console.WriteLine($"Entrada per a 9 anys: {PreuEntrada(9)} €");
+    Console.WriteLine($"Entrada per a 30 anys: {PreuEntrada(30)} €");
+}
+```
+
+```text
+> Entrada per a 9 anys: 5 €
+> Entrada per a 30 anys: 8 €
+```
+
+## Estructura if-else if-else
+
+Quan hi ha **més de dos casos**, encadenem condicions amb `else if`:
+
+- Les condicions es comproven **en ordre**, de dalt a baix.
+- S'executa el bloc de la **primera condició certa**, i la resta se salten.
+- Si cap condició és certa, s'executa l'`else` final.
+
+<img src="if-else-if.jpeg" alt="Diagrama de flux de l'estructura if-else if-else" width="400">
+
+```csharp
+if (condicio1)
+{
+    // si condicio1 és certa
+}
+else if (condicio2)
+{
+    // si condicio1 és falsa i condicio2 és certa
+}
+else
+{
+    // si cap condició és certa
+}
+```
+
+Exemple: funció `Signe` que indica si un nombre és positiu, negatiu o zero.
+
+```csharp
+public static string Signe(int num)
+{
+    string resultat;
+    if (num > 0)
+    {
+        resultat = "positiu";
+    }
+    else if (num < 0)
+    {
+        resultat = "negatiu";
+    }
+    else
+    {
+        resultat = "zero";
+    }
+    return resultat;
+}
+
+public static void Main(string[] args)
+{
+    Console.WriteLine(Signe(5));
+    Console.WriteLine(Signe(-3));
+    Console.WriteLine(Signe(0));
+}
+```
+
+```text
+> positiu
+> negatiu
+> zero
+```
+
+## Exercicis
+
 ### 📝 Exercici: funció LimitarVolum
 
 El volum d'un altaveu va de 0 a 100. Implementa una funció `LimitarVolum` que rebi un volum i el retorni tal com és, però si passa de 100, ha de retornar 100.
@@ -118,54 +226,7 @@ public static double CalcularPreuFinal(double import)
     return total;
 }
 ```
-
 </details>
-
-## Estructura if-else
-
-L'`if-else` tria **un camí entre dos**: si la condició és certa s'executa el bloc de l'`if`, i si és falsa s'executa el bloc de l'`else`. Sempre s'executa **un dels dos, i només un**.
-
-<img src="if-else.png" alt="Diagrama de flux de l'estructura if-else" width="350">
-
-```csharp
-if (condicio)
-{
-    // instruccions si la condició és certa
-}
-else
-{
-    // instruccions si la condició és falsa
-}
-```
-
-Exemple: funció `PreuEntrada` que calcula el preu d'una entrada de cinema. Els menors de 12 anys paguen **5 €** i la resta, **8 €**.
-
-```csharp
-public static int PreuEntrada(int edat)
-{
-    int preu;
-    if (edat < 12)
-    {
-        preu = 5;
-    }
-    else
-    {
-        preu = 8;
-    }
-    return preu;
-}
-
-public static void Main(string[] args)
-{
-    Console.WriteLine($"Entrada per a 9 anys: {PreuEntrada(9)} €");
-    Console.WriteLine($"Entrada per a 30 anys: {PreuEntrada(30)} €");
-}
-```
-
-```text
-> Entrada per a 9 anys: 5 €
-> Entrada per a 30 anys: 8 €
-```
 
 ### 📝 Exercici: funció EsMajorEdat
 
@@ -242,66 +303,6 @@ public static string Qualificar(double nota)
 ```
 
 </details>
-
-## Estructura if-else if-else
-
-Quan hi ha **més de dos casos**, encadenem condicions amb `else if`:
-
-- Les condicions es comproven **en ordre**, de dalt a baix.
-- S'executa el bloc de la **primera condició certa**, i la resta se salten.
-- Si cap condició és certa, s'executa l'`else` final.
-
-<img src="if-else-if.jpeg" alt="Diagrama de flux de l'estructura if-else if-else" width="400">
-
-```csharp
-if (condicio1)
-{
-    // si condicio1 és certa
-}
-else if (condicio2)
-{
-    // si condicio1 és falsa i condicio2 és certa
-}
-else
-{
-    // si cap condició és certa
-}
-```
-
-Exemple: funció `Signe` que indica si un nombre és positiu, negatiu o zero.
-
-```csharp
-public static string Signe(int num)
-{
-    string resultat;
-    if (num > 0)
-    {
-        resultat = "positiu";
-    }
-    else if (num < 0)
-    {
-        resultat = "negatiu";
-    }
-    else
-    {
-        resultat = "zero";
-    }
-    return resultat;
-}
-
-public static void Main(string[] args)
-{
-    Console.WriteLine(Signe(5));
-    Console.WriteLine(Signe(-3));
-    Console.WriteLine(Signe(0));
-}
-```
-
-```text
-> positiu
-> negatiu
-> zero
-```
 
 ### 📝 Exercici: funció Qualificacio
 
@@ -485,11 +486,3 @@ public static string InfoTemperatura(double temperatura)
 ```
 
 </details>
-
-## Estructura switch
-
-> L'estructura del switch la veurem més endavant quan necessitem fer un menú.
-
-## Estructures aniuades
-
-> Les estructures anuiades les treballarem més endavant conjuntament amb les estructures repetitives.

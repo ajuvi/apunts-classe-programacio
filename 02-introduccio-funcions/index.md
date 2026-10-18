@@ -2,9 +2,6 @@
 layout: default
 ---
 
-> Pots accedir al següent enllaç on s'explica de manera visual què és una funció.  
-> [https://canva.link/p4g78nhmggbmiop](https://canva.link/p4g78nhmggbmiop)
-
 # Introducció a les funcions
 
 ## Què és una funció?
@@ -14,6 +11,9 @@ Una funció és un **bloc de codi amb un nom** que fa una tasca concreta.
 Una funció **rep uns paràmetres** (pot tenir-ne diversos o cap) i **sempre retorna un valor**.
 
 <img src="image.png" alt="Funció Max" width="400">
+
+> En el següent enllaç s'explica de manera visual què és una funció.  
+> [https://canva.link/p4g78nhmggbmiop](https://canva.link/p4g78nhmggbmiop)
 
 ## Implementar una funció
 
@@ -42,7 +42,7 @@ Exemples de noms de funcions:
 * AreaCercle(...)
 * VolumEsfera(...)
 
-## Comentar les funcions
+### Comentar les funcions
 
 Les funcions s'han de comentar perquè el programador sàpiga com utilitzar-les correctament.
 
@@ -61,13 +61,13 @@ public static double Maxim(double n1, double n2)
 
 > Si escrius `///` just a sobre d'una funció, Visual Studio genera automàticament l'estructura del comentari.
 
-## La funció com una caixa negra
+### La funció com una caixa negra
 
 Un cop implementada i comentada, una funció es pot utilitzar **sense conèixer els detalls interns**: només cal saber els pràmetres què rep i què retorna.
 
 <img src="caixa-negra.png" alt="Caixa negra: entrada → funció → sortida" width="400">
 
-## Crida a una funció (utilitzar una funció) 
+##  Utilitzar una funció (crida a una funció) 
 
 ### Amb valor literals
 
@@ -139,6 +139,8 @@ public static void Main(string[] args)
 ```text
 > 7
 ```
+
+## Exercicis
 
 ### 📝 Exercici: quin resultat donarà?
 

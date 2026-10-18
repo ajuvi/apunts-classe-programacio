@@ -112,8 +112,6 @@ Exemples:
 !(a == 0 || a > 10)    →   !(a == 0) && !(a > 10)    →   a != 0 && a <= 10
 ```
 
-## Exercicis
-
 ### 📝 Exercici: escriu l'expressió booleana
 
 Donat el codi següent:

@@ -1,5 +1,5 @@
 ---
-layout: default
+layout: portada
 ---
 
 # Materials de programació
@@ -14,6 +14,7 @@ layout: default
 4. [Estructures condicionals](04-estructures-condicionals/)
 5. [Estructures repetitives](05-estructures-repetitives/)
 6. [Recorreguts de fitxers amb while](06-recorreguts-de-fitxers-while/)
+7. [Recorreguts de fitxers amb for](07-recorreguts-de-fitxers-for/)
 
 ## Infografies
 
@@ -23,6 +24,14 @@ layout: default
   <figure class="infografia">
     <img src="{{ '/assets/images/infografies/funcions.svg' | relative_url }}" alt="Regles per crear funcions">
     <figcaption>Regles per crear funcions</figcaption>
+  </figure>
+  <figure class="infografia">
+    <img src="{{ '/assets/images/infografies/recorregut-while-fitxer-notes.svg' | relative_url }}" alt="Recorregut while amb una dada">
+    <figcaption>Recorregut while fitxer notes</figcaption>
+  </figure>
+  <figure class="infografia">
+    <img src="{{ '/assets/images/infografies/recorregut-while-fitxer-alumnes.svg' | relative_url }}" alt="Recorregut while fitxer amb una dada">
+    <figcaption>Recorregut while fitxer alumnes</figcaption>
   </figure>
 </div>
 

@@ -4,7 +4,9 @@ layout: default
 
 # Variables, tipus i expressions
 
-## Tipus bàsics
+## Variables i constants
+
+### Literals
 
 Cada dada que fa servir un programa té un **tipus**. El tipus indica quins valors pot prendre la dada i quines operacions s'hi poden fer. Un **literal** és un valor escrit directament al codi.
 
@@ -16,7 +18,7 @@ Cada dada que fa servir un programa té un **tipus**. El tipus indica quins valo
 | string | `"Hola mundo"` &nbsp;&nbsp;&nbsp; `"abc"` &nbsp;&nbsp;&nbsp; `" "` &nbsp;&nbsp;&nbsp; `"A"` &nbsp;&nbsp;&nbsp; `""` |
 | bool   | `True` &nbsp;&nbsp;&nbsp; `False` |
 
-## Variables (declaració i inicialització)
+### Declaració de variables
 
 Una **variable** és un espai de memòria amb un nom on guardem una dada que pot canviar mentre el programa s'executa. Cada variable té un **tipus**, que indica quina mena de valors pot guardar.
 
@@ -31,17 +33,7 @@ double temperatura;
 char grupClasse;
 ```
 
-## Assignació
-
-**Assignar** vol dir guardar un valor dins d'una variable que ja està declarada. Fem servir l'operador `=`.
-
-```csharp
-elTeuNom = "Manel";
-temperatura = 23.20;
-grupClasse = 'A';
-```
-
-## Constants
+### Constants
 
 Una **constant** és com una variable, però el seu valor **no pot canviar** mentre s'executa el programa. Es declara amb la paraula `const` davant del tipus i s'ha d'inicialitzar en el mateix moment de declarar-la.
 
@@ -52,7 +44,19 @@ const double PI = 3.1416;
 const double TEMPERATURA_MAXIMA = 42.5;
 ```
 
-## Llegir de teclat
+### Assignació de valors
+
+**Assignar** vol dir guardar un valor dins d'una variable que ja està declarada. Fem servir l'operador `=`.
+
+```csharp
+elTeuNom = "Manel";
+temperatura = 23.20;
+grupClasse = 'A';
+```
+
+## Lectura i escriptura
+
+### Llegir de teclat
 
 Per demanar una dada a l'usuari fem servir `Console.ReadLine()`. Aquesta instrucció espera que l'usuari escrigui un text i premi **Enter**, i retorna el que ha escrit com a `string`.
 
@@ -84,7 +88,7 @@ Console.Write("ETS MAJOR D'EDAT? ");
 majorEdat = Convert.ToBoolean(Console.ReadLine());
 ```
 
-## Escriure per pantalla
+### Escriure per pantalla
 
 Per mostrar text per pantalla tenim dues instruccions:
 
@@ -202,6 +206,76 @@ Combinant la **divisió entera** (`/`) i el **residu** (`%`) per 10, 100, 1000..
 | `1234 / 10`        | `123`    |
 | `1234 % 1000`      | `234`    |
 
+## Codi ASCII
+
+Cada caràcter (`char`) té associat un **número enter**: el seu codi ASCII.
+
+| Caràcters        | Codis ASCII  |
+|------------------|--------------|
+| `' '` (espai)    | `32`         |
+| `'0'` ... `'9'`  | `48` ... `57`  |
+| `'A'` ... `'Z'`  | `65` ... `90`  |
+| `'a'` ... `'z'`  | `97` ... `122` |
+
+### Convertir de `char` a `int`
+
+```csharp
+char lletra = 'A';
+int codi = (int)lletra;          // 65
+
+Console.WriteLine((int)'a');     // 97
+Console.WriteLine(Convert.ToInt32('A'));     // 65
+```
+### Convertir de `int` a `char`
+
+```csharp
+int codi = 66;
+char lletra = (char)codi;        // 'B'
+
+Console.WriteLine((char)97);     // 'a'
+Console.WriteLine(Convert.ToChar(48));     // '0'
+```
+
+## Valors aleatoris (Random)
+
+Per generar valors aleatoris primer creem un objecte `Random` (**només un cop**) i després el fem servir tantes vegades com calgui.
+
+```csharp
+Random rnd = new Random();
+```
+
+| Instrucció              | Què retorna                                  | Exemple de resultat |
+|-------------------------|----------------------------------------------|---------------------|
+| `rnd.Next()`            | Un enter positiu qualsevol                   | `1804289383`        |
+| `rnd.Next(10)`          | Un enter entre `0` i `9`                     | `7`                 |
+| `rnd.Next(1, 7)`        | Un enter entre `1` i `6`                     | `4`                 |
+
+> El valor **màxim no s'inclou**: `rnd.Next(1, 7)` pot donar de `1` a `6`, mai `7`.
+
+### Exemple de Random amb enters
+
+```csharp
+Random rnd = new Random();
+
+int dau = rnd.Next(1, 7);             // de 1 a 6
+int nota = rnd.Next(0, 11);           // de 0 a 10
+int temperatura = rnd.Next(-5, 36);   // de -5 a 35
+```
+
+### Exemple de Random amb caràcters
+
+Com que els caràcters tenen un codi [ASCII](#ascii), podem generar un número aleatori i convertir-lo a `char`.
+
+```csharp
+Random rnd = new Random();
+
+char majuscula = (char)rnd.Next('A', 'Z' + 1);   // de 'A' a 'Z'
+char minuscula = (char)rnd.Next('a', 'z' + 1);   // de 'a' a 'z'
+char digit     = (char)rnd.Next('0', '9' + 1);   // de '0' a '9'
+```
+
+## Exercicis
+
 ### 📝 Exercici: separar una data
 
 Tenim una data guardada com un sol número amb el format `YYYYMMDD`. Mostra el dia, el mes i l'any per separat.
@@ -271,74 +345,6 @@ Console.WriteLine($"El número capgirat és {capgirat}");
 ```
 
 </details>
-
-## ASCII
-
-Cada caràcter (`char`) té associat un **número enter**: el seu codi ASCII.
-
-| Caràcters        | Codis ASCII  |
-|------------------|--------------|
-| `' '` (espai)    | `32`         |
-| `'0'` ... `'9'`  | `48` ... `57`  |
-| `'A'` ... `'Z'`  | `65` ... `90`  |
-| `'a'` ... `'z'`  | `97` ... `122` |
-
-### Convertir de `char` a `int`
-
-```csharp
-char lletra = 'A';
-int codi = (int)lletra;          // 65
-
-Console.WriteLine((int)'a');     // 97
-Console.WriteLine(Convert.ToInt32('A'));     // 65
-```
-### Convertir de `int` a `char`
-
-```csharp
-int codi = 66;
-char lletra = (char)codi;        // 'B'
-
-Console.WriteLine((char)97);     // 'a'
-Console.WriteLine(Convert.ToChar(48));     // '0'
-```
-
-## Valors aleatoris (Random)
-
-Per generar valors aleatoris primer creem un objecte `Random` (**només un cop**) i després el fem servir tantes vegades com calgui.
-
-```csharp
-Random rnd = new Random();
-```
-
-| Instrucció              | Què retorna                                  | Exemple de resultat |
-|-------------------------|----------------------------------------------|---------------------|
-| `rnd.Next()`            | Un enter positiu qualsevol                   | `1804289383`        |
-| `rnd.Next(10)`          | Un enter entre `0` i `9`                     | `7`                 |
-| `rnd.Next(1, 7)`        | Un enter entre `1` i `6`                     | `4`                 |
-
-> El valor **màxim no s'inclou**: `rnd.Next(1, 7)` pot donar de `1` a `6`, mai `7`.
-
-### Exemple de Random amb enters
-
-```csharp
-Random rnd = new Random();
-
-int dau = rnd.Next(1, 7);             // de 1 a 6
-int nota = rnd.Next(0, 11);           // de 0 a 10
-int temperatura = rnd.Next(-5, 36);   // de -5 a 35
-```
-
-### Exemple de Random amb caràcters
-
-Com que els caràcters tenen un codi [ASCII](#ascii), podem generar un número aleatori i convertir-lo a `char`.
-
-```csharp
-Random rnd = new Random();
-
-char majuscula = (char)rnd.Next('A', 'Z' + 1);   // de 'A' a 'Z'
-char minuscula = (char)rnd.Next('a', 'z' + 1);   // de 'a' a 'z'
-char digit     = (char)rnd.Next('0', '9' + 1);   // de '0' a '9'
-```
 
 ### 📝 Exercici: notes aleatòries
 

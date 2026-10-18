@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1123" width="1200" height="1123">
+  <rect width="1200" height="1123" fill="#ffffff"/>
+
+  <text font-family="Arial, Helvetica, sans-serif" x="600" y="62" text-anchor="middle" font-size="38" font-weight="700" fill="#1f2328">Recorregut d'un fitxer amb el while</text>
+  <text x="344" y="100" font-family="Arial, Helvetica, sans-serif" font-size="19" fill="#57606a">Llegir <tspan fill="#0a3069" font-weight="700">notes.txt</tspan> línia a línia fins a <tspan fill="#cf222e" font-weight="700">null</tspan> i calcular-ne la mitjana</text>
+
+  <!-- ===== Codi ===== -->
+  <g transform="translate(30,130)">
+    <rect width="680" height="963" rx="14" fill="#f0fbf3" stroke="#1a7f37" stroke-width="2"/>
+    <path d="M14 0 H666 A14 14 0 0 1 680 14 V54 H0 V14 A14 14 0 0 1 14 0 Z" fill="#1a7f37"/>
+    <circle cx="32" cy="27" r="15" fill="#ffffff"/>
+    <path d="M28 21 L22 27 L28 33 M36 21 L42 27 L36 33" fill="none" stroke="#1a7f37" stroke-width="2.8" stroke-linecap="round" stroke-linejoin="round"/>
+    <text font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" fill="#ffffff" x="58" y="35">El programa</text>
+    <rect x="16" y="70" width="648" height="887" rx="8" fill="#f6f8fa"/>
+    <rect x="40" y="92" width="5" height="144" rx="2.5" fill="#0969da"/>
+    <text xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="17" fill="#1f2328" x="56" y="110"><tspan fill="#6e7781" font-style="italic">// VARIABLES I CONSTANTS</tspan></text>
+    <text xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="17" fill="#1f2328" x="56" y="138"><tspan fill="#8250df">const</tspan> <tspan fill="#0550ae">string</tspan> MARCA_FI = <tspan fill="#cf222e" font-weight="700">null</tspan>;</text>
+    <text xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="17" fill="#1f2328" x="56" y="166"><tspan fill="#8250df">const</tspan> <tspan fill="#0550ae">string</tspan> NOM_FITXER = <tspan fill="#0a3069">&quot;notes.txt&quot;</tspan>;</text>
+    <text xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="17" fill="#1f2328" x="56" y="194"><tspan fill="#0550ae">double</tspan> suma = 0;</text>
+    <text xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="17" fill="#1f2328" x="56" y="222"><tspan fill="#0550ae">int</tspan> comptador = 0;</text>
+    <rect x="40" y="245" width="5" height="88" rx="2.5" fill="#8250df"/>
+    <text xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="17" fill="#1f2328" x="56" y="263"><tspan fill="#6e7781" font-style="italic">// OBRIR EL FITXER I LLEGIR EL PRIMER ELEMENT</tspan></text>
+    <text xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="17" fill="#1f2328" x="56" y="291"><tspan fill="#0550ae">StreamReader</tspan> sr = <tspan fill="#8250df">new</tspan> <tspan fill="#0550ae">StreamReader</tspan>(NOM_FITXER);</text>
+    <text xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="17" fill="#1f2328" x="56" y="319"><tspan fill="#0550ae">string</tspan> linia = sr.<tspan fill="#953800">ReadLine</tspan>();</text>
+    <rect x="40" y="342" width="5" height="60" rx="2.5" fill="#1a7f37"/>
+    <text xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="17" fill="#1f2328" x="56" y="360"><tspan fill="#6e7781" font-style="italic">// MARCA DE FINAL DE RECORREGUT</tspan></text>
+    <text xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="17" fill="#1f2328" x="56" y="388"><tspan fill="#8250df">while</tspan> (linia != MARCA_FI) {</text>
+    <rect x="40" y="411" width="5" height="116" rx="2.5" fill="#1a7f37"/>
+    <text xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="17" fill="#1f2328" x="56" y="429">    <tspan fill="#6e7781" font-style="italic">// TRACTAR ELEMENT</tspan></text>
+    <text xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="17" fill="#1f2328" x="56" y="457">    <tspan fill="#0550ae">double</tspan> nota = <tspan fill="#0550ae">Convert</tspan>.<tspan fill="#953800">ToDouble</tspan>(linia);</text>
+    <text xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="17" fill="#1f2328" x="56" y="485">    suma = suma + nota;</text>
+    <text xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="17" fill="#1f2328" x="56" y="513">    comptador = comptador + 1;</text>
+    <rect x="40" y="536" width="5" height="60" rx="2.5" fill="#1a7f37"/>
+    <text xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="17" fill="#1f2328" x="56" y="554">    <tspan fill="#6e7781" font-style="italic">// LLEGIR SEGÜENT ELEMENT</tspan></text>
+    <text xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="17" fill="#1f2328" x="56" y="582">    linia = sr.<tspan fill="#953800">ReadLine</tspan>();</text>
+    <rect x="40" y="605" width="5" height="32" rx="2.5" fill="#1a7f37"/>
+    <text xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="17" fill="#1f2328" x="56" y="623">}</text>
+    <rect x="40" y="646" width="5" height="32" rx="2.5" fill="#bc4c00"/>
+    <text xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="17" fill="#1f2328" x="56" y="664">sr.<tspan fill="#953800">Close</tspan>();</text>
+    <rect x="40" y="687" width="5" height="228" rx="2.5" fill="#bc4c00"/>
+    <text xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="17" fill="#1f2328" x="56" y="705"><tspan fill="#6e7781" font-style="italic">// CALCULAR I MOSTRAR RESULTATS</tspan></text>
+    <text xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="17" fill="#1f2328" x="56" y="733"><tspan fill="#8250df">if</tspan> (comptador == 0) {</text>
+    <text xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="17" fill="#1f2328" x="56" y="761">    <tspan fill="#0550ae">Console</tspan>.<tspan fill="#953800">WriteLine</tspan>(<tspan fill="#0a3069">&quot;El fitxer està buit&quot;</tspan>);</text>
+    <text xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="17" fill="#1f2328" x="56" y="789">} <tspan fill="#8250df">else</tspan> {</text>
+    <text xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="17" fill="#1f2328" x="56" y="817">    <tspan fill="#0550ae">double</tspan> mitjana = suma / comptador;</text>
+    <text xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="17" fill="#1f2328" x="56" y="845">    <tspan fill="#0550ae">Console</tspan>.<tspan fill="#953800">WriteLine</tspan>(<tspan fill="#0a3069">&quot;Notes: &quot;</tspan> + comptador);</text>
+    <text xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="17" fill="#1f2328" x="56" y="873">    <tspan fill="#0550ae">Console</tspan>.<tspan fill="#953800">WriteLine</tspan>(<tspan fill="#0a3069">&quot;Mitjana: &quot;</tspan> + mitjana);</text>
+    <text xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="17" fill="#1f2328" x="56" y="901">}</text>
+    <rect x="478" y="120" width="186" height="24" rx="12" fill="#0969da"/><text font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#ffffff" x="571.0" y="137" text-anchor="middle">null = fi del fitxer</text>
+    <rect x="478" y="301" width="186" height="24" rx="12" fill="#8250df"/><text font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#ffffff" x="571.0" y="318" text-anchor="middle">1a lectura</text>
+    <rect x="478" y="370" width="186" height="24" rx="12" fill="#1a7f37"/><text font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#ffffff" x="571.0" y="387" text-anchor="middle">mentre no sigui null</text>
+    <rect x="478" y="564" width="186" height="24" rx="12" fill="#1a7f37"/><text font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#ffffff" x="571.0" y="581" text-anchor="middle">lectura següent</text>
+    <rect x="478" y="646" width="186" height="24" rx="12" fill="#bc4c00"/><text font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" fill="#ffffff" x="571.0" y="663" text-anchor="middle">tancar el fitxer</text>
+  </g>
+
+  <!-- ===== Fitxer, traça i resultat ===== -->
+  <g>
+    <rect x="730" y="130" width="440" height="963" rx="14" fill="#f1f8ff" stroke="#0969da" stroke-width="2"/><path d="M744 130 H1156 A14 14 0 0 1 1170 144 V184 H730 V144 A14 14 0 0 1 744 130 Z" fill="#0969da"/><circle cx="762" cy="157" r="15" fill="#ffffff"/><path d="M757 149 L769 157 L757 165 Z" fill="#0969da"/><text font-family="Arial, Helvetica, sans-serif" font-size="21" font-weight="700" fill="#ffffff" x="788" y="165">Execució</text>
+    <text x="750" y="208" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#1f2328">El fitxer</text>
+    <rect x="750" y="220" width="400" height="348" rx="8" fill="#ffffff" stroke="#d0d7de" stroke-width="1.5"/>
+    <path d="M758 220 H1142 A8 8 0 0 1 1150 228 V250 H750 V228 A8 8 0 0 1 758 220 Z" fill="#eaeef2"/>
+    <text x="766" y="240" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="14" fill="#57606a">notes.txt</text>
+    <text x="778" y="288.24" text-anchor="end" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="14" fill="#8c959f">1</text>
+    <text x="796" y="288.24" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="20" fill="#1f2328">7,5</text>
+    <text x="1134" y="288.24" text-anchor="end" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="15" fill="#57606a">ReadLine() → "7,5"</text>
+    <text x="778" y="340.24" text-anchor="end" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="14" fill="#8c959f">2</text>
+    <text x="796" y="340.24" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="20" fill="#1f2328">6,25</text>
+    <text x="1134" y="340.24" text-anchor="end" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="15" fill="#57606a">ReadLine() → "6,25"</text>
+    <text x="778" y="392.24" text-anchor="end" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="14" fill="#8c959f">3</text>
+    <text x="796" y="392.24" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="20" fill="#1f2328">8,75</text>
+    <text x="1134" y="392.24" text-anchor="end" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="15" fill="#57606a">ReadLine() → "8,75"</text>
+    <text x="778" y="444.24" text-anchor="end" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="14" fill="#8c959f">4</text>
+    <text x="796" y="444.24" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="20" fill="#1f2328">5</text>
+    <text x="1134" y="444.24" text-anchor="end" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="15" fill="#57606a">ReadLine() → "5"</text>
+    <text x="778" y="496.24" text-anchor="end" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="14" fill="#8c959f">5</text>
+    <text x="796" y="496.24" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="20" fill="#1f2328">9</text>
+    <text x="1134" y="496.24" text-anchor="end" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="15" fill="#57606a">ReadLine() → "9"</text>
+    <text x="796" y="548.24" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="14" fill="#cf222e" font-style="italic">(fi del fitxer)</text>
+    <text x="1134" y="548.24" text-anchor="end" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="15" fill="#cf222e" font-weight="700">ReadLine() → null</text>
+    <text x="750" y="628" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#1f2328">Resultat per pantalla</text>
+    <rect x="750" y="642" width="400" height="130" rx="8" fill="#0d1117"/>
+    <circle cx="766" cy="656" r="4.5" fill="#ff5f57"/><circle cx="780" cy="656" r="4.5" fill="#febc2e"/><circle cx="794" cy="656" r="4.5" fill="#28c840"/>
+    <text x="766" y="700" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="20" fill="#e6edf3">Notes: 5</text>
+    <text x="766" y="732" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="20" fill="#e6edf3">Mitjana: 7,3</text>
+    <text x="750" y="818" font-family="Arial, Helvetica, sans-serif" font-size="17" font-weight="700" fill="#1f2328">Si el fitxer està buit</text>
+    <text font-family="Arial, Helvetica, sans-serif" x="750" y="840" font-size="14" fill="#57606a">El primer ReadLine() ja retorna <tspan fill="#cf222e" font-weight="700">null</tspan>: no entra al while.</text>
+    <rect x="750" y="854" width="400" height="76" rx="8" fill="#0d1117"/>
+    <circle cx="766" cy="868" r="4.5" fill="#ff5f57"/><circle cx="780" cy="868" r="4.5" fill="#febc2e"/><circle cx="794" cy="868" r="4.5" fill="#28c840"/>
+    <text x="766" y="910" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="20" fill="#e6edf3">El fitxer està buit</text>
+  </g>
+
+</svg>

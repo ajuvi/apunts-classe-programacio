@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="ca">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Apunts de programació</title>
+  <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+</head>
+<body>
+  <div class="container-lg px-3 my-5 markdown-body">
+    {% unless page.url == "/" %}
+      <p><a href="{{ '/' | relative_url }}">← Tornar a l'índex</a></p>
+    {% endunless %}
+    {{ content }}
+  </div>
+</body>
+</html>

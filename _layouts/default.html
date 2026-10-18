@@ -5,13 +5,255 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Apunts de programació</title>
   <link rel="stylesheet" href="{{ '/assets/css/style.css?v=' | append: site.github.build_revision | relative_url }}">
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* ---------- Índex de la pàgina ---------- */
+    .index-pagina {
+      position: relative;
+      margin: 0 0 2em;
+    }
+    .index-pagina ul {
+      display: flex;
+      flex-wrap: nowrap;
+      gap: 0.5em;
+      list-style: none;
+      margin: 0;
+      padding: 0 0 0.5em;
+      overflow-x: auto;
+      scroll-snap-type: x proximity;
+      scrollbar-width: thin;
+      -webkit-overflow-scrolling: touch;
+      mask-image: linear-gradient(to right, black 90%, transparent);
+      -webkit-mask-image: linear-gradient(to right, black 90%, transparent);
+    }
+    .markdown-body .index-pagina li,
+    .markdown-body .index-pagina li + li {
+      margin: 0;
+      flex: 0 0 auto;
+      scroll-snap-align: start;
+    }
+    .index-pagina a {
+      display: inline-block;
+      padding: 0.25em 0.8em;
+      font-size: 0.85em;
+      white-space: nowrap;
+      color: #57606a;
+      background: #f6f8fa;
+      border: 1px solid #d0d7de;
+      border-radius: 999px;
+      text-decoration: none;
+      -webkit-touch-callout: none;      /* sense menú del sistema en mantenir premut */
+      -webkit-user-select: none;
+      user-select: none;
+    }
+    .index-pagina a:hover,
+    .index-pagina a.actiu {
+      color: #0969da;
+      border-color: #0969da;
+      background: #ddf4ff;
+      text-decoration: none;
+    }
+
+    /* ---------- Menú desplegable de subseccions ---------- */
+    .index-desplegable {
+      display: none;
+      position: absolute;
+      z-index: 20;
+      padding: 0.5em;
+      background: #ffffff;
+      border: 1px solid #d0d7de;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(140, 149, 159, 0.25);
+    }
+    .index-desplegable.visible {
+      display: block;
+    }
+    .index-pagina .index-desplegable ul {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.35em;
+      padding: 0;
+      overflow: visible;
+      mask-image: none;
+      -webkit-mask-image: none;
+    }
+
+    /* ---------- Fletxa per tornar a dalt ---------- */
+    .markdown-body h2 .torna-amunt {
+      display: inline-flex;
+      vertical-align: middle;
+      margin-left: 0.4em;
+      color: #8c959f;
+      text-decoration: none;
+    }
+    .markdown-body h2 .torna-amunt:hover {
+      color: #0969da;
+    }
+    .markdown-body h2 .torna-amunt svg {
+      width: 18px;
+      height: 18px;
+    }
+  </style>
 </head>
 <body>
   <div class="container-lg px-3 my-5 markdown-body">
-    {% unless page.url == "/" %}
-      <p><a href="{{ '/' | relative_url }}">← Tornar a l'índex</a></p>
-    {% endunless %}
+    <p><a href="{{ '/' | relative_url }}">← Tornar a l'índex</a></p>
     {{ content }}
   </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', function () {
+      var titols = document.querySelectorAll('.markdown-body h2[id]');
+      var h1 = document.querySelector('.markdown-body h1');
+
+      // Crea una etiqueta (li > a) que porta a un títol
+      function crearEtiqueta(titol) {
+        var enllac = document.createElement('a');
+        enllac.href = '#' + titol.id;
+        enllac.textContent = titol.textContent;
+        var item = document.createElement('li');
+        item.appendChild(enllac);
+        return item;
+      }
+
+      // Busca els títols ### que hi ha entre un ## i el següent ##
+      function subtitols(h2) {
+        var llista = [];
+        var el = h2.nextElementSibling;
+        while (el && el.tagName !== 'H2') {
+          if (el.tagName === 'H3' && el.id) {
+            llista.push(el);
+          }
+          el = el.nextElementSibling;
+        }
+        return llista;
+      }
+
+      // 1. Índex de la pàgina, sota el títol #
+      if (titols.length >= 2 && h1) {
+        var nav = document.createElement('nav');
+        nav.className = 'index-pagina';
+
+        var fila = document.createElement('ul');
+        var menu = document.createElement('div');
+        menu.className = 'index-desplegable';
+        var llistaMenu = document.createElement('ul');
+        menu.appendChild(llistaMenu);
+
+        function amagarMenu() {
+          menu.classList.remove('visible');
+          fila.querySelectorAll('a').forEach(function (a) {
+            a.classList.remove('actiu');
+          });
+        }
+
+        function mostrarMenu(item, fills) {
+          amagarMenu();
+          item.firstChild.classList.add('actiu');
+          llistaMenu.innerHTML = '';
+          fills.forEach(function (h3) {
+            llistaMenu.appendChild(crearEtiqueta(h3));
+          });
+
+          // Posició: just a sota de l'etiqueta
+          var rNav = nav.getBoundingClientRect();
+          var rItem = item.getBoundingClientRect();
+          menu.style.top = (rItem.bottom - rNav.top + 4) + 'px';
+          menu.classList.add('visible');
+
+          // Evitem que surti per la dreta
+          var esquerra = rItem.left - rNav.left;
+          var maxim = rNav.width - menu.offsetWidth;
+          menu.style.left = Math.max(0, Math.min(esquerra, maxim)) + 'px';
+        }
+
+        var teHover = window.matchMedia('(hover: hover)').matches;
+
+        titols.forEach(function (h2) {
+          var item = crearEtiqueta(h2);
+          var fills = subtitols(h2);
+          fila.appendChild(item);
+
+          // Ordinador: passar el ratolí per sobre
+          if (teHover) {
+            item.addEventListener('mouseenter', function () {
+              if (fills.length > 0) {
+                mostrarMenu(item, fills);
+              } else {
+                amagarMenu();
+              }
+            });
+          }
+
+          // Mòbil: mantenir premut mig segon
+          if (fills.length > 0) {
+            var temporitzador = null;
+            var pressLlarg = false;
+
+            function cancelar() {
+              clearTimeout(temporitzador);
+            }
+
+            item.addEventListener('touchstart', function () {
+              pressLlarg = false;
+              temporitzador = setTimeout(function () {
+                pressLlarg = true;
+                mostrarMenu(item, fills);
+                if (navigator.vibrate) navigator.vibrate(15);
+              }, 500);
+            }, { passive: true });
+
+            item.addEventListener('touchmove', cancelar, { passive: true });
+            item.addEventListener('touchend', cancelar);
+            item.addEventListener('touchcancel', cancelar);
+
+            // Si ha estat una pulsació llarga, no seguim l'enllaç
+            item.firstChild.addEventListener('click', function (e) {
+              if (pressLlarg) {
+                e.preventDefault();
+                pressLlarg = false;
+              }
+            });
+
+            // Sense el menú del sistema ("obrir en una pestanya nova"...)
+            item.addEventListener('contextmenu', function (e) {
+              e.preventDefault();
+            });
+          }
+        });
+
+        // Tancar el menú
+        nav.addEventListener('mouseleave', amagarMenu);
+        fila.addEventListener('scroll', amagarMenu);
+        llistaMenu.addEventListener('click', amagarMenu);
+        document.addEventListener('touchstart', function (e) {
+          if (!nav.contains(e.target)) amagarMenu();
+        }, { passive: true });
+
+        nav.appendChild(fila);
+        nav.appendChild(menu);
+        h1.insertAdjacentElement('afterend', nav);
+      }
+
+      // 2. Fletxa al costat de cada títol ##
+      var icona =
+        '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" ' +
+        'stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">' +
+        '<path d="M12 19V5M5 12l7-7 7 7"/></svg>';
+
+      titols.forEach(function (h) {
+        var fletxa = document.createElement('a');
+        fletxa.href = '#';
+        fletxa.className = 'torna-amunt';
+        fletxa.title = 'Torna a dalt';
+        fletxa.setAttribute('aria-label', 'Torna a dalt');
+        fletxa.innerHTML = icona;
+        h.appendChild(fletxa);
+      });
+    });
+  </script>
 </body>
 </html>

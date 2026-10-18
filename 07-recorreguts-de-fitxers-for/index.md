@@ -4,155 +4,71 @@ layout: default
 
 # Recorreguts de fitxers amb for
 
+Quan la **primera línia** del fitxer ens diu **quantes dades hi ha**, ja sabem quantes voltes ha de fer el bucle. En aquest cas fem servir un `for`, i el fitxer **no necessita cap MARCA_FI**.
 
-#############################################################################################
+## Esquema de recorreguts amb for
 
-Un **recorregut** consisteix a llegir un fitxer **de principi a una MARCA_FI**, una línia darrere l'altra, i fer alguna cosa amb cada dada: escriure-la, sumar-la, comptar-la...
+1. Obrim el fitxer i llegim la **primera línia**: el nombre d'elements.
+2. Fem un `for` que dona **tantes voltes com elements** hi ha.
+3. A cada volta, **llegim** una dada i en fem el **tractament**.
+4. Tanquem el fitxer i fem el **tractament final**.
 
-## Llegir una línia d'un fitxer
+### Una línia per dada
 
-Fitxer `numeros.txt`:
+Fitxer `numeros.txt`. La primera línia (`5`) indica que hi ha 5 números a continuació:
 
 ```text
-42
+5
 23
 12
+42
 5
-0
 9
 ```
 
-```csharp
-public static void Main(string[] args)
-{
-    StreamReader fitxer = new StreamReader("numeros.txt");   // obrim el fitxer
-
-    string linia = fitxer.ReadLine();                        // llegim una línia
-    int num = Convert.ToInt32(linia);                        // la convertim a número
-
-    Console.WriteLine($"He llegit el {num}");
-
-    fitxer.Close();                                          // tanquem el fitxer
-}
-```
-
-```text
-> He llegit el 42
-```
-
-## Llegir dues línies d'un fitxer
-
-Cada `ReadLine()` llegeix **la línia següent** del fitxer. Amb el mateix fitxer `numeros.txt`:
+Programa que calcula la suma de tots els números del fitxer:
 
 ```csharp
 public static void Main(string[] args)
 {
-    StreamReader fitxer = new StreamReader("numeros.txt");
-
-    int num1 = Convert.ToInt32(fitxer.ReadLine());   // 1a línia
-    int num2 = Convert.ToInt32(fitxer.ReadLine());   // 2a línia
-
-    Console.WriteLine($"He llegit el {num1} i el {num2}");
-
-    fitxer.Close();
-}
-```
-
-```text
-> He llegit el 42 i el 23
-```
-
-## Esquema de recorreguts amb While
-
-Per saber on s'acaben les dades, el fitxer té una **marca de fi**: un valor especial que no és una dada. Al programa la guardem en una constant `MARCA_FI`.
-
-### Una línia per dada (MARCA_FI = null)
-
-Llegim el fitxer `numeros.txt` amb la marca de fi és el **null**.
-
-Programa que mostra quants números hi ha en un fitxer. El programa acaba quan es troba un null.
-
-```csharp
-public static void Main(string[] args)
-{
-    const string MARCA_FI = null;
     const string NOM_FITXER = "numeros.txt";
- 
-    int contador = 0;
+    int quantitat;
+    int suma = 0;
 
-    // obrim el fitxer i llegim la primera línia
-    StreamReader fitxer = new StreamReader(NOM_FITXER);  
-    string  linia = fitxer.ReadLine();           
-    
-    //mentre no trobem la marca
-    while (linia != MARCA_FI)
+    // obrim el fitxer i llegim quants números hi ha
+    StreamReader fitxer = new StreamReader(NOM_FITXER);
+    quantitat = Convert.ToInt32(fitxer.ReadLine());
+
+    // repetim tantes vegades com números hi ha
+    for (int i = 0; i < quantitat; i++)
     {
-        // tractament
-        contador = contador + 1;
+        // llegir el número
+        int num = Convert.ToInt32(fitxer.ReadLine());
 
-        // llegir la següent línia
-        linia = fitxer.ReadLine();
+        // tractament
+        suma = suma + num;
     }
 
     // tanquem el fitxer
     fitxer.Close();
 
     // tractament final
-    Console.WriteLine($"Hi ha {contador} números abans del null");
+    Console.WriteLine($"Suma: {suma}");
 }
 ```
 
 ```text
-> Hi ha 6 números abans del null
-```
-
-### Una línia per dada (MARCA_FI = 0)
-
-Llegim el fitxer `numeros.txt` amb la marca de fi és el **0**.
-
-Programa que mostra quants números enters que hi ha en un fitxer fins trobar un 0. El programa acaba quan es troba un 0.
-
-```csharp
-public static void Main(string[] args)
-{
-    const int MARCA_FI = 0;    
-    const string NOM_FITXER = "numeros.txt";
-
-    int contador = 0;
-
-    // obrim el fitxer i llegim el primer número
-    StreamReader fitxer = new StreamReader(NOM_FITXER);  
-    int num = Convert.ToInt32(fitxer.ReadLine());
-
-    //mentre no trobem la marca
-    while (num != MARCA_FI)
-    {
-        // tractament
-        contador = contador + 1;
-
-        // llegir el següent número
-        num = Convert.ToInt32(fitxer.ReadLine()); 
-    }
-
-    //tancar el fitxer
-    fitxer.Close();
-
-    // tractament final
-    Console.WriteLine($"Hi ha {contador} números abans del 0");
-}
-```
-
-```text
-> Hi ha 4 números abans del 0
+> Suma: 91
 ```
 
 ### Dues línies per dada
 
-De vegades, cada element ocupa **dues línies**. Per exemple, el nom d'un alumne i, a sota, la seva nota.
+Cada element ocupa **dues línies**: el nom de l'alumne i, a sota, la seva nota. La primera línia diu quants alumnes hi ha.
 
-Fitxer `notes.txt`, amb la marca `FI`:
+Fitxer `notes.txt`:
 
 ```text
+3
 Anna
 7
 Pau
@@ -161,84 +77,49 @@ Marta
 9
 ```
 
-Programa que escriu cada alumne amb la seva nota:
+Programa que compta quants alumnes han aprovat:
 
 ```csharp
 public static void Main(string[] args)
 {
-    const string MARCA_FI = null;
     const string NOM_FITXER = "notes.txt";
+    int quantitat;
+    int aprovats = 0;
 
-    int nota;
-    string nom;
+    // obrim el fitxer i llegim quants alumnes hi ha
+    StreamReader fitxer = new StreamReader(NOM_FITXER);
+    quantitat = Convert.ToInt32(fitxer.ReadLine());
 
-    // obrim el fitxer i llegim el primer nom
-    StreamReader fitxer = new StreamReader(NOM_FITXER);    
-    nom = fitxer.ReadLine();
-    while (nom != MARCA_FI)                         // mentre no trobem la marca
+    for (int i = 0; i < quantitat; i++)
     {
-        // tractament
-        nota = Convert.ToInt32(fitxer.ReadLine());  // llegim segona línia amb la nota
-        Console.WriteLine($"{nom}: {nota}");
+        // llegir les dues línies de l'alumne
+        string nom = fitxer.ReadLine();
+        int nota = Convert.ToInt32(fitxer.ReadLine());
 
-        // llegir el següent nom
-        nom = fitxer.ReadLine();                    // llegim el nom següent
+        // tractament
+        if (nota >= 5)
+        {
+            aprovats = aprovats + 1;
+        }
     }
+
+    // tanquem el fitxer
     fitxer.Close();
+
+    // tractament final
+    Console.WriteLine($"Han aprovat {aprovats} de {quantitat} alumnes");
 }
 ```
 
 ```text
-> Anna: 7
-> Pau: 4
-> Marta: 9
+> Han aprovat 2 de 3 alumnes
 ```
 
 ## Exercicis
 
-### 📝 Exercici: suma dels números
-
-Fes un programa que llegeixi el fitxer `numeros.txt` i escrigui la suma de tots els números fins a la marca de fi sigui zero.
-
-```text
-> Suma: 82
-```
-
-<details markdown="1">
-<summary markdown="span">Mostra la solució</summary>
-
-```csharp
-public static void Main(string[] args)
-{
-    const int MARCA_FI = 0;
-    const string NOM_FITXER = "numeros.txt";
-
-    int num;
-    int suma = 0;
-
-   // obrim el fitxer i llegim el primer número
-    StreamReader fitxer = new StreamReader(NOM_FITXER);
-    num = Convert.ToInt32(fitxer.ReadLine());
-    while (num != MARCA_FI)
-    {
-        // tractament
-        suma = suma + num;
-
-        // llegir seqüent número
-        num = Convert.ToInt32(fitxer.ReadLine());
-    }
-    fitxer.Close();
-
-    // tractament final
-    Console.WriteLine($"Suma: {suma}");
-}
-```
-
-</details>
-
 ### 📝 Exercici: comptar números grans
 
-Fes un programa que llegeixi **tot** el fitxer `numeros.txt` i compti quants números són més grans que 5. En aquest cas la `MARCA_FI` ha de ser `null`.
+Fes un programa que llegeixi el fitxer  [**numeros.txt**](numeros.txt) i compti quants números són més grans que 5.
 
 ```text
 > Més grans que 5: 4
@@ -250,24 +131,21 @@ Fes un programa que llegeixi **tot** el fitxer `numeros.txt` i compti quants nú
 ```csharp
 public static void Main(string[] args)
 {
-    const string MARCA_FI = null;
     const string NOM_FITXER = "numeros.txt";
 
-    string linia;
-    int num;
+    int quantitat;
     int comptador = 0;
 
     StreamReader fitxer = new StreamReader(NOM_FITXER);
-    linia = fitxer.ReadLine();
-    while (linia != MARCA_FI)
+    quantitat = Convert.ToInt32(fitxer.ReadLine());
+
+    for (int i = 0; i < quantitat; i++)
     {
-        num = Convert.ToInt32(linia);
+        int num = Convert.ToInt32(fitxer.ReadLine());
         if (num > 5)
         {
             comptador = comptador + 1;
         }
-
-        linia = fitxer.ReadLine();
     }
     fitxer.Close();
 
@@ -277,9 +155,9 @@ public static void Main(string[] args)
 
 </details>
 
-### 📝 Exercici: aprovats
+### 📝 Exercici: nom aprovats
 
-Fes un programa que llegeixi el fitxer `notes.txt` i escrigui només el nom dels alumnes aprovats (nota 5 o més). Llegir totes les línies del fitxer.
+Fes un programa que llegeixi el fitxer  [**notes.txt**](notes.txt) i escrigui només el nom dels alumnes aprovats (nota 5 o més).
 
 ```text
 > Anna
@@ -292,25 +170,70 @@ Fes un programa que llegeixi el fitxer `notes.txt` i escrigui només el nom dels
 ```csharp
 public static void Main(string[] args)
 {
-    const string MARCA_FI = null;
     const string NOM_FITXER = "notes.txt";
 
+    int quantitat;
     string nom;
     int nota;
 
     StreamReader fitxer = new StreamReader(NOM_FITXER);
-    nom = fitxer.ReadLine();
-    while (nom != MARCA_FI)
+    quantitat = Convert.ToInt32(fitxer.ReadLine());
+
+    for (int i = 0; i < quantitat; i++)
     {
+        nom = fitxer.ReadLine();
         nota = Convert.ToInt32(fitxer.ReadLine());
         if (nota >= 5)
         {
             Console.WriteLine(nom);
         }
-
-        nom = fitxer.ReadLine();
     }
     fitxer.Close();
+}
+```
+
+</details>
+
+### 📝 Exercici: mitjana de les notes
+
+Fes un programa que llegeixi el fitxer [**notes.txt**](notes.txt) i calculi la mitjana de les notes de tots els alumnes.
+
+> Pista: suma totes les notes dins del bucle i, quan acabis, divideix la suma entre la quantitat d'alumnes. Compte amb la **divisió entera**!
+
+```text
+> Mitjana: 6,67
+```
+
+<details markdown="1">
+<summary markdown="span">Mostra la solució</summary>
+
+```csharp
+public static void Main(string[] args)
+{
+    const string NOM_FITXER = "notes.txt";
+    int quantitat;
+    int suma = 0;
+
+    // obrim el fitxer i llegim quants alumnes hi ha
+    StreamReader fitxer = new StreamReader(NOM_FITXER);
+    quantitat = Convert.ToInt32(fitxer.ReadLine());
+
+    for (int i = 0; i < quantitat; i++)
+    {
+        // llegir les dues línies de l'alumne
+        string nom = fitxer.ReadLine();
+        int nota = Convert.ToInt32(fitxer.ReadLine());
+
+        // tractament
+        suma = suma + nota;
+    }
+
+    // tanquem el fitxer
+    fitxer.Close();
+
+    // tractament final
+    double mitjana = (double)suma / quantitat;
+    Console.WriteLine($"Mitjana: {mitjana:0.00}");
 }
 ```
 
