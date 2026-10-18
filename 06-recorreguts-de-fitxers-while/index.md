@@ -61,7 +61,7 @@ public static void Main(string[] args)
 > He llegit el 42 i el 23
 ```
 
-## Recorreguts amb While
+## Esquemes de recorreguts amb While
 
 Per saber on s'acaben les dades, el fitxer té una **marca de fi**: un valor especial que no és una dada. Al programa la guardem en una constant `MARCA_FI`.
 
