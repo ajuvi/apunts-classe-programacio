@@ -198,8 +198,6 @@ public static void Main(string[] args)
 
 Fes un programa que llegeixi el fitxer [**notes.txt**](notes.txt) i calculi la mitjana de les notes de tots els alumnes.
 
-> Pista: suma totes les notes dins del bucle i, quan acabis, divideix la suma entre la quantitat d'alumnes. Compte amb la **divisió entera**!
-
 ```text
 > Mitjana: 6,67
 ```
