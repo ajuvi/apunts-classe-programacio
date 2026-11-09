@@ -1,0 +1,473 @@
+/* ==================================================
+   CONFIGURACIÓ GENERAL
+   ================================================== */
+
+html {
+  scroll-behavior: smooth;
+}
+
+
+/* ==================================================
+   ÍNDEX DE LA PÀGINA
+   ================================================== */
+
+.index-pagina {
+  position: relative;
+  margin: 0 0 2em;
+}
+
+.index-pagina ul {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 0.5em;
+  list-style: none;
+  margin: 0;
+  padding: 0 0 0.5em;
+  overflow-x: auto;
+  scroll-snap-type: x proximity;
+  scrollbar-width: thin;
+  -webkit-overflow-scrolling: touch;
+
+  mask-image: linear-gradient(to right, black 90%, transparent);
+  -webkit-mask-image: linear-gradient(to right, black 90%, transparent);
+}
+
+.markdown-body .index-pagina li,
+.markdown-body .index-pagina li + li {
+  margin: 0;
+  flex: 0 0 auto;
+  scroll-snap-align: start;
+}
+
+.index-pagina a {
+  display: inline-block;
+  padding: 0.25em 0.8em;
+  font-size: 0.85em;
+  white-space: nowrap;
+  color: #57606a;
+  background: #f6f8fa;
+  border: 1px solid #d0d7de;
+  border-radius: 999px;
+  text-decoration: none;
+
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+.index-pagina a:hover,
+.index-pagina a.actiu {
+  color: #0969da;
+  border-color: #0969da;
+  background: #ddf4ff;
+  text-decoration: none;
+}
+
+
+/* ==================================================
+   MENÚ DESPLEGABLE
+   ================================================== */
+
+.index-desplegable {
+  display: none;
+  position: absolute;
+  z-index: 20;
+
+  min-width: 210px;
+  max-width: 400px;
+
+  padding: 0.65em;
+
+  background: #ffffff;
+  border: 1px solid #d0d7de;
+  border-radius: 12px;
+
+  box-shadow: 0 8px 24px rgba(140, 149, 159, 0.25);
+}
+
+.index-desplegable.visible {
+  display: block;
+}
+
+.index-pagina .index-desplegable ul {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+
+  gap: 0.2em;
+  padding: 0;
+  margin: 0;
+
+  overflow: visible;
+
+  mask-image: none;
+  -webkit-mask-image: none;
+}
+
+.markdown-body .index-pagina .index-desplegable li {
+  flex: 0 0 auto;
+  width: 100%;
+  scroll-snap-align: none;
+}
+
+
+/* ==================================================
+   SUBMENÚ: CAPÇALERES DE GRUP (.grup)
+   ================================================== */
+
+.index-desplegable .menu-separador {
+  width: 100%;
+  box-sizing: border-box;
+
+  margin: 0.55em 0 0.2em;
+  padding: 0.45em 0.55em;
+
+  color: #002323;
+  background: #f1f6fc;
+
+  border-radius: 4px;
+
+  font-size: 0.82em;
+  font-weight: 700;
+
+  list-style: none;
+}
+
+.index-desplegable .menu-separador:first-child {
+  margin-top: 0;
+}
+
+.index-desplegable .menu-separador a {
+  display: block;
+
+  width: 100%;
+  padding: 0;
+
+  color: inherit;
+  background: transparent;
+  border: none;
+
+  font-size: inherit;
+  white-space: normal;
+}
+
+.index-desplegable .menu-separador a:hover {
+  color: #0550ae;
+  background: transparent;
+  text-decoration: none;
+}
+
+
+/* ==================================================
+   SUBMENÚ: ENTRADES (exercicis i títols normals)
+   ================================================== */
+
+.index-desplegable li:not(.menu-separador) a {
+  display: block;
+
+  width: 100%;
+  box-sizing: border-box;
+
+  padding: 0.4em 0.7em 0.4em 1.2em;
+
+  color: #57606a;
+  background: transparent;
+
+  border: none;
+  border-radius: 5px;
+
+  font-size: 0.85em;
+  white-space: normal;
+}
+
+.index-desplegable li:not(.menu-separador) a:hover {
+  color: #0969da;
+  background: #ddf4ff;
+}
+
+/* Icona dels exercicis al submenú */
+
+.index-desplegable .menu-exercici a::before {
+  content: "📝 ";
+}
+
+
+/* ==================================================
+   FLETXES PER TORNAR A DALT
+   ================================================== */
+
+.markdown-body h2 .torna-amunt {
+  display: inline-flex;
+  vertical-align: middle;
+
+  margin-left: 0.4em;
+
+  color: #8c959f;
+  text-decoration: none;
+}
+
+.markdown-body h2 .torna-amunt:hover {
+  color: #0969da;
+}
+
+.markdown-body h2 .torna-amunt svg {
+  width: 18px;
+  height: 18px;
+}
+
+
+/* ==================================================
+   ENLLAÇOS AMB POPUP
+   ================================================== */
+
+a.popup-fitxer {
+  position: relative;
+  cursor: help;
+}
+
+a.popup-fitxer:hover {
+  color: #0969da;
+}
+
+
+/* ==================================================
+   CONTINGUT DEL POPUP
+   ================================================== */
+
+.popup-fitxer-contingut {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+
+  max-width: 350px;
+  max-height: 300px;
+
+  overflow: auto;
+
+  padding: 1em;
+
+  background: #ffffff;
+  color: #24292f;
+
+  border: 1px solid #d0d7de;
+  border-radius: 8px;
+
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+
+  font-family: monospace;
+  font-size: 0.85em;
+
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+
+  pointer-events: auto;
+}
+
+.popup-fitxer-contingut.visible {
+  display: block;
+}
+
+
+/* ==================================================
+   EXERCICIS (div.targeta-exercici, creat a partir de .exercici)
+   ================================================== */
+
+.markdown-body .targeta-exercici {
+  margin: 2.5em 0;
+  padding: 1.2em;
+
+  background: #f8fafc;
+  border: 1px solid #cbd5e1;
+  border-radius: 10px;
+
+  box-shadow: 0 3px 8px rgba(30, 64, 175, 0.07);
+}
+
+
+/* ==================================================
+   CAPÇALERA DE L'EXERCICI
+   ================================================== */
+
+.markdown-body .targeta-exercici > .exercici {
+  margin: 0 0 1.2em;
+  padding: 0.75em 1em;
+
+  color: #174ea6;
+  background: #e8f1ff;
+
+  border-left: 5px solid #3b82f6;
+  border-radius: 6px;
+
+  font-size: 1.15em;
+  font-weight: 600;
+}
+
+/* Prefix del títol (no s'escriu al Markdown) */
+
+.markdown-body .targeta-exercici > .exercici::before {
+  content: "📝 Exercici: ";
+}
+
+
+/* ==================================================
+   ENUNCIAT
+   ================================================== */
+
+.markdown-body .targeta-exercici > .exercici + p {
+  margin-top: 0;
+}
+
+
+/* ==================================================
+   BLOCS DE CODI
+   ================================================== */
+
+/* Codi font C# */
+
+.markdown-body .targeta-exercici pre {
+  border-radius: 7px;
+  border: 1px solid #e2e8f0;
+}
+
+
+/* ==================================================
+   SORTIDA DE TEXT (```text)
+   ================================================== */
+
+.markdown-body .targeta-exercici .language-text pre,
+.markdown-body .targeta-exercici pre:has(> code.language-text) {
+  background: #f0fdf4;
+  border-color: #bbf7d0;
+  color: #166534;
+}
+
+
+/* ==================================================
+   SORTIDA DE CONSOLA (```cmd o ```console)
+   ================================================== */
+
+.markdown-body .targeta-exercici :is(.language-cmd, .language-console) pre,
+.markdown-body .targeta-exercici pre:has(> code:is(.language-cmd, .language-console)) {
+  background: #1e293b;
+  color: #e2e8f0;
+
+  border: 1px solid #334155;
+  border-radius: 8px;
+
+  padding: 1em 1.2em;
+}
+
+/* Evitar els colors del ressaltat de sintaxi sobre el fons fosc */
+
+.markdown-body .targeta-exercici :is(.language-cmd, .language-console) :is(code, span),
+.markdown-body .targeta-exercici pre:has(> code:is(.language-cmd, .language-console)) :is(code, span) {
+  color: #e2e8f0;
+  background: transparent;
+}
+
+
+/* ==================================================
+   SOLUCIONS DESPLEGABLES
+   ================================================== */
+
+.markdown-body .targeta-exercici details {
+  margin-top: 1em;
+  padding-top: 0.5em;
+
+  border-top: 1px solid #e2e8f0;
+}
+
+.markdown-body .targeta-exercici details summary {
+  cursor: pointer;
+
+  color: #475569;
+
+  padding: 0.6em 0.5em;
+
+  border-radius: 5px;
+  outline: none;
+}
+
+.markdown-body .targeta-exercici details summary:hover {
+  color: #1d4ed8;
+  background: #e8f1ff;
+}
+
+/* Focus visible per a navegació amb teclat */
+
+.markdown-body .targeta-exercici details summary:focus-visible {
+  outline: 2px solid #3b82f6;
+  outline-offset: 2px;
+}
+
+/* Separació entre el títol i el codi de la solució */
+
+.markdown-body .targeta-exercici details pre {
+  margin-top: 0.5em;
+}
+
+
+/* ==================================================
+   GRAELLA GENÈRICA
+
+   <div class="graella">         tantes columnes com hi càpiguen
+   <div class="graella graella-2">   2 columnes
+   <div class="graella graella-3">   3 columnes
+
+   Cada <div markdown="1"> de dins és una casella.
+   En mòbil, sempre una sola columna.
+   ================================================== */
+
+.markdown-body .graella {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16em, 1fr));
+  gap: 1em;
+  margin: 1em 0;
+}
+
+.markdown-body .graella-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.markdown-body .graella-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+@media (max-width: 600px) {
+  .markdown-body .graella-2,
+  .markdown-body .graella-3 {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Cada casella */
+
+.markdown-body .graella > div {
+  min-width: 0;
+
+  padding: 0.5em 1em;
+
+  background: #ffffff;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+}
+
+/* El codi llarg fa scroll dins la casella, no la desborda */
+
+.markdown-body .graella pre {
+  overflow-x: auto;
+}
+
+
+/* ==================================================
+   ADVERTIMENTS
+   ================================================== */
+
+.advertiment {
+  background: #fffbeb;
+  border-left: 4px solid #f59e0b;
+
+  padding: 0.8em 1em;
+
+  border-radius: 5px;
+}

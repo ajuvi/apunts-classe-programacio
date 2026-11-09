@@ -1,23 +1,20 @@
-/* ===== Carrusel de miniatures ===== */
+/* ===== Graella de miniatures ===== */
 .infografies-carrussel {
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 140px);
   gap: 1rem;
-  overflow-x: auto;
   padding: 1rem 0 1.5rem;
-  scroll-snap-type: x mandatory;
-  scroll-behavior: smooth;
-  -webkit-overflow-scrolling: touch;
 }
 
 .infografia {
-  flex: 0 0 140px;
   margin: 0;
-  scroll-snap-align: start;
+  min-width: 0;
 }
 
 .infografia img {
   display: block;
   width: 100%;
+  max-width: none;
   height: 100px;
   object-fit: cover;
   object-position: top;
@@ -39,8 +36,8 @@
 }
 
 @media (min-width: 768px) {
-  .infografia {
-    flex-basis: 180px;
+  .infografies-carrussel {
+    grid-template-columns: repeat(auto-fill, 180px);
   }
   .infografia img {
     height: 130px;
