@@ -1,153 +1,165 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1155" width="1100" height="1155">
-  <rect x="0.0" y="0.0" width="1100.0" height="1155.0" fill="#ffffff"/>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1100 1181" width="1100" height="1181">
+  <rect x="0.0" y="0.0" width="1100.0" height="1181.0" rx="0" fill="#ffffff"/>
   <text x="550.0" y="74.0" font-family="Arial, Helvetica, sans-serif" font-size="38" fill="#1f2328" font-weight="700" text-anchor="middle">Recorreguts d'un fitxer amb el for</text>
   <text x="550.0" y="106.0" font-family="Arial, Helvetica, sans-serif" font-size="19" fill="#57606a" text-anchor="middle">Llegir primer la quantitat d'elements, i repetir-ho aquest nombre de vegades: llegir l'element i tractar-lo.</text>
+  <!-- ===== Exemple: què fa el programa ===== -->
+  <rect x="287.6" y="124.0" width="524.8" height="36.0" rx="18" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
+  <text x="550.0" y="148" font-family="Arial, Helvetica, sans-serif" font-size="17" fill="#1f2328" text-anchor="middle" xml:space="preserve"><tspan font-weight="700">Exemple: </tspan><tspan>calcular la </tspan><tspan font-weight="700">mitjana</tspan><tspan> de les notes del fitxer.</tspan></text>
   <!-- ===== Panell 1: Un element per línia ===== -->
-  <clipPath id="panell0"><rect x="30.0" y="142" width="510.0" height="835" rx="14"/></clipPath>
-  <rect x="30.0" y="142.0" width="510.0" height="835.0" rx="14" fill="#fbfcfd"/>
-  <g clip-path="url(#panell0)"><rect x="30.0" y="142.0" width="510.0" height="56.0" fill="#24292f"/></g>
-  <rect x="30.0" y="142.0" width="510.0" height="835.0" rx="14" fill="none" stroke="#d0d7de" stroke-width="2"/>
-  <circle cx="61.0" cy="170.0" r="15" fill="#ffffff"/>
-  <text x="61.0" y="176.0" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#24292f" font-weight="700" text-anchor="middle">1</text>
-  <text x="88.0" y="177.0" font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#ffffff" font-weight="700">Un element per línia</text>
-  <clipPath id="fitxer0"><rect x="46.0" y="214.0" width="190" height="170" rx="8"/></clipPath>
-  <rect x="46.0" y="214.0" width="190.0" height="170.0" rx="8" fill="#ffffff"/>
+  <clipPath id="panell0"><rect x="30.0" y="180" width="510.0" height="823" rx="14"/></clipPath>
+  <rect x="30.0" y="180.0" width="510.0" height="823.0" rx="14" fill="#fbfcfd"/>
+  <g clip-path="url(#panell0)">
+  <rect x="30.0" y="180.0" width="510.0" height="56.0" rx="0" fill="#24292f"/>
+  </g>
+  <rect x="30.0" y="180.0" width="510.0" height="823.0" rx="14" fill="none" stroke="#d0d7de" stroke-width="2"/>
+  <circle cx="61.0" cy="208.0" r="15" fill="#ffffff"/>
+  <text x="61.0" y="214.0" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#24292f" font-weight="700" text-anchor="middle">1</text>
+  <text x="88.0" y="215.0" font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#ffffff" font-weight="700">Un element per línia</text>
+  <clipPath id="fitxer0"><rect x="46.0" y="252.0" width="200" height="170" rx="8"/></clipPath>
+  <rect x="46.0" y="252.0" width="200.0" height="170.0" rx="8" fill="#ffffff"/>
   <g clip-path="url(#fitxer0)">
-  <rect x="46.0" y="214.0" width="190.0" height="22.0" fill="#f6f8fa"/>
-  <rect x="46.0" y="237.0" width="190.0" height="19.0" fill="#fff8c5"/>
+  <rect x="46.0" y="252.0" width="200.0" height="22.0" rx="0" fill="#f6f8fa"/>
+  <rect x="46.0" y="275.0" width="200.0" height="19.0" rx="0" fill="#fff8c5"/>
   </g>
-  <line x1="46.0" y1="236.0" x2="236.0" y2="236.0" stroke="#d0d7de"/>
-  <rect x="46.0" y="214.0" width="190.0" height="170.0" rx="8" fill="none" stroke="#d0d7de" stroke-width="1"/>
-  <text x="56.0" y="230.0" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#57606a" font-weight="700">notes2.txt</text>
-  <text x="56.0" y="251.0" font-family="'Courier New', Courier, monospace" font-size="14" fill="#9a6700" font-weight="700">3</text>
-  <text x="76.0" y="250.0" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#9a6700">← quantitat</text>
-  <text x="56.0" y="270.0" font-family="'Courier New', Courier, monospace" font-size="14" fill="#1f2328">7</text>
-  <text x="56.0" y="289.0" font-family="'Courier New', Courier, monospace" font-size="14" fill="#1f2328">5</text>
-  <text x="56.0" y="308.0" font-family="'Courier New', Courier, monospace" font-size="14" fill="#1f2328">9</text>
-  <rect x="250.0" y="214.0" width="183.6" height="28.0" rx="14" fill="#fff8c5" stroke="#d4a72c" stroke-width="1"/>
-  <text x="262.0" y="233.0" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#9a6700">Quantitat: 1a línia</text>
-  <text x="250.0" y="268.0" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#424a53">Una nota per línia. La primera</text>
-  <text x="250.0" y="289.0" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#424a53">línia diu quantes notes hi ha, i</text>
-  <text x="250.0" y="310.0" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#424a53">el for en llegeix exactament</text>
-  <text x="250.0" y="331.0" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#424a53">aquest nombre.</text>
-  <rect x="46.0" y="400.0" width="478.0" height="561.0" rx="8" fill="#f6f8fa"/>
-  <text x="58.0" y="427.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#6e7781" font-style="italic">// variables i constants</tspan></text>
-  <text x="58.0" y="448.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#8250df">const</tspan><tspan fill="#1f2328"> </tspan><tspan fill="#0550ae">string</tspan><tspan fill="#1f2328"> NOM_FITXER = </tspan><tspan fill="#0a3069">"notes2.txt"</tspan><tspan fill="#1f2328">;</tspan></text>
-  <text x="58.0" y="469.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#0550ae">int</tspan><tspan fill="#1f2328"> suma = </tspan><tspan fill="#0550ae">0</tspan><tspan fill="#1f2328">;</tspan></text>
-  <text x="58.0" y="511.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#6e7781" font-style="italic">// obrir el fitxer i llegir la quantitat d'elements</tspan></text>
-  <text x="58.0" y="532.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#0550ae">StreamReader</tspan><tspan fill="#1f2328"> sr = </tspan><tspan fill="#8250df">new</tspan><tspan fill="#1f2328"> </tspan><tspan fill="#0550ae">StreamReader</tspan><tspan fill="#1f2328">(NOM_FITXER);</tspan></text>
-  <rect x="46.0" y="538.0" width="478.0" height="21.0" fill="#ddf4ff"/>
-  <rect x="46.0" y="538.0" width="4.0" height="21.0" fill="#0969da"/>
-  <text x="58.0" y="553.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#0550ae">int</tspan><tspan fill="#1f2328"> quantitat = Convert.</tspan><tspan fill="#953800">ToInt32</tspan><tspan fill="#1f2328">(sr.</tspan><tspan fill="#953800">ReadLine</tspan><tspan fill="#1f2328">());</tspan></text>
-  <rect x="46.0" y="580.0" width="478.0" height="21.0" fill="#fff8c5"/>
-  <rect x="46.0" y="580.0" width="4.0" height="21.0" fill="#9a6700"/>
-  <text x="58.0" y="595.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#8250df">for</tspan><tspan fill="#1f2328"> (</tspan><tspan fill="#0550ae">int</tspan><tspan fill="#1f2328"> i = </tspan><tspan fill="#0550ae">0</tspan><tspan fill="#1f2328">; i &lt; quantitat; i = i + </tspan><tspan fill="#0550ae">1</tspan><tspan fill="#1f2328">) {</tspan></text>
-  <text x="58.0" y="616.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">    </tspan><tspan fill="#6e7781" font-style="italic">// llegir l'element</tspan></text>
-  <rect x="46.0" y="622.0" width="478.0" height="21.0" fill="#ddf4ff"/>
-  <rect x="46.0" y="622.0" width="4.0" height="21.0" fill="#0969da"/>
-  <text x="58.0" y="637.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">    </tspan><tspan fill="#0550ae">int</tspan><tspan fill="#1f2328"> nota = Convert.</tspan><tspan fill="#953800">ToInt32</tspan><tspan fill="#1f2328">(sr.</tspan><tspan fill="#953800">ReadLine</tspan><tspan fill="#1f2328">());</tspan></text>
-  <text x="58.0" y="658.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">    </tspan><tspan fill="#6e7781" font-style="italic">// tractar l'element</tspan></text>
-  <rect x="46.0" y="664.0" width="478.0" height="21.0" fill="#dafbe1"/>
-  <rect x="46.0" y="664.0" width="4.0" height="21.0" fill="#1a7f37"/>
-  <text x="58.0" y="679.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">    suma = suma + nota;</tspan></text>
-  <text x="58.0" y="700.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">}</tspan></text>
-  <text x="58.0" y="721.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">sr.</tspan><tspan fill="#953800">Close</tspan><tspan fill="#1f2328">();</tspan></text>
-  <text x="58.0" y="763.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#6e7781" font-style="italic">// tractament final</tspan></text>
-  <text x="58.0" y="784.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#8250df">if</tspan><tspan fill="#1f2328"> (quantitat == </tspan><tspan fill="#0550ae">0</tspan><tspan fill="#1f2328">) {</tspan></text>
-  <text x="58.0" y="805.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">    Console.</tspan><tspan fill="#953800">WriteLine</tspan><tspan fill="#1f2328">(</tspan><tspan fill="#0a3069">"Fitxer buit"</tspan><tspan fill="#1f2328">);</tspan></text>
-  <text x="58.0" y="826.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">} </tspan><tspan fill="#8250df">else</tspan><tspan fill="#1f2328"> {</tspan></text>
-  <text x="58.0" y="847.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">    </tspan><tspan fill="#0550ae">double</tspan><tspan fill="#1f2328"> mitjana = (</tspan><tspan fill="#0550ae">double</tspan><tspan fill="#1f2328">)suma / quantitat;</tspan></text>
-  <text x="58.0" y="868.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">    Console.</tspan><tspan fill="#953800">WriteLine</tspan><tspan fill="#1f2328">(</tspan><tspan fill="#0a3069">$"Mitjana: {mitjana:0.00}"</tspan><tspan fill="#1f2328">);</tspan></text>
-  <text x="58.0" y="889.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">}</tspan></text>
+  <line x1="46.0" y1="274.0" x2="246.0" y2="274.0" stroke="#d0d7de"/>
+  <rect x="46.0" y="252.0" width="200.0" height="170.0" rx="8" fill="none" stroke="#d0d7de" stroke-width="1"/>
+  <text x="56.0" y="268.0" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#57606a" font-weight="700">notes2.txt</text>
+  <text x="56.0" y="289.0" font-family="'Courier New', Courier, monospace" font-size="14" fill="#9a6700" font-weight="700">3</text>
+  <text x="74.4" y="288.0" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#9a6700">← quantitat</text>
+  <text x="56.0" y="308.0" font-family="'Courier New', Courier, monospace" font-size="14" fill="#1f2328">7</text>
+  <text x="56.0" y="327.0" font-family="'Courier New', Courier, monospace" font-size="14" fill="#1f2328">5</text>
+  <text x="56.0" y="346.0" font-family="'Courier New', Courier, monospace" font-size="14" fill="#1f2328">9</text>
+  <rect x="260.0" y="252.0" width="189.3" height="28.0" rx="14" fill="#fff8c5" stroke="#d4a72c" stroke-width="1"/>
+  <text x="272.0" y="271.0" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#9a6700">Quantitat: 1a línia</text>
+  <text x="260.0" y="306.0" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#424a53">Una nota per línia. La primera</text>
+  <text x="260.0" y="327.0" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#424a53">línia diu quantes notes hi ha, i el</text>
+  <text x="260.0" y="348.0" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#424a53">for en llegeix exactament aquest</text>
+  <text x="260.0" y="369.0" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#424a53">nombre.</text>
+  <rect x="260.0" y="384.0" width="264.0" height="28.0" rx="6" fill="#1e293b"/>
+  <text x="270.0" y="403.0" font-family="'Courier New', Courier, monospace" font-size="14" fill="#e2e8f0">&gt; Mitjana: 7,00</text>
+  <rect x="46.0" y="438.0" width="478.0" height="549.0" rx="8" fill="#f6f8fa"/>
+  <text x="58.0" y="465.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#57606a" font-style="italic">// variables i constants</tspan></text>
+  <text x="58.0" y="486.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#8250df">const</tspan><tspan fill="#1f2328"> </tspan><tspan fill="#0550ae">string</tspan><tspan fill="#1f2328"> NOM_FITXER = </tspan><tspan fill="#0a3069">"notes2.txt"</tspan><tspan fill="#1f2328">;</tspan></text>
+  <text x="58.0" y="507.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#0550ae">int</tspan><tspan fill="#1f2328"> suma = </tspan><tspan fill="#0550ae">0</tspan><tspan fill="#1f2328">;</tspan></text>
+  <text x="58.0" y="549.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#57606a" font-style="italic">// obrir el fitxer i llegir la quantitat d'elements</tspan></text>
+  <text x="58.0" y="570.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#0550ae">StreamReader</tspan><tspan fill="#1f2328"> sr = </tspan><tspan fill="#8250df">new</tspan><tspan fill="#1f2328"> </tspan><tspan fill="#0550ae">StreamReader</tspan><tspan fill="#1f2328">(NOM_FITXER);</tspan></text>
+  <rect x="46.0" y="576.0" width="478.0" height="21.0" rx="0" fill="#ddf4ff"/>
+  <rect x="46.0" y="576.0" width="4.0" height="21.0" rx="0" fill="#0969da"/>
+  <text x="58.0" y="591.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#0550ae">int</tspan><tspan fill="#1f2328"> quantitat = Convert.</tspan><tspan fill="#953800">ToInt32</tspan><tspan fill="#1f2328">(sr.</tspan><tspan fill="#953800">ReadLine</tspan><tspan fill="#1f2328">());</tspan></text>
+  <rect x="46.0" y="618.0" width="478.0" height="21.0" rx="0" fill="#fff8c5"/>
+  <rect x="46.0" y="618.0" width="4.0" height="21.0" rx="0" fill="#9a6700"/>
+  <text x="58.0" y="633.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#8250df">for</tspan><tspan fill="#1f2328"> (</tspan><tspan fill="#0550ae">int</tspan><tspan fill="#1f2328"> i = </tspan><tspan fill="#0550ae">0</tspan><tspan fill="#1f2328">; i &lt; quantitat; i = i + </tspan><tspan fill="#0550ae">1</tspan><tspan fill="#1f2328">) {</tspan></text>
+  <text x="58.0" y="654.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">    </tspan><tspan fill="#57606a" font-style="italic">// llegir l'element</tspan></text>
+  <rect x="46.0" y="660.0" width="478.0" height="21.0" rx="0" fill="#ddf4ff"/>
+  <rect x="46.0" y="660.0" width="4.0" height="21.0" rx="0" fill="#0969da"/>
+  <text x="58.0" y="675.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">    </tspan><tspan fill="#0550ae">int</tspan><tspan fill="#1f2328"> nota = Convert.</tspan><tspan fill="#953800">ToInt32</tspan><tspan fill="#1f2328">(sr.</tspan><tspan fill="#953800">ReadLine</tspan><tspan fill="#1f2328">());</tspan></text>
+  <text x="58.0" y="696.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">    </tspan><tspan fill="#57606a" font-style="italic">// tractar l'element</tspan></text>
+  <rect x="46.0" y="702.0" width="478.0" height="21.0" rx="0" fill="#dafbe1"/>
+  <rect x="46.0" y="702.0" width="4.0" height="21.0" rx="0" fill="#1a7f37"/>
+  <text x="58.0" y="717.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">    suma = suma + nota;</tspan></text>
+  <text x="58.0" y="738.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">}</tspan></text>
+  <text x="58.0" y="759.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">sr.</tspan><tspan fill="#953800">Close</tspan><tspan fill="#1f2328">();</tspan></text>
+  <text x="58.0" y="801.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#57606a" font-style="italic">// tractament final</tspan></text>
+  <text x="58.0" y="822.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#8250df">if</tspan><tspan fill="#1f2328"> (quantitat == </tspan><tspan fill="#0550ae">0</tspan><tspan fill="#1f2328">) {</tspan></text>
+  <text x="58.0" y="843.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">    Console.</tspan><tspan fill="#953800">WriteLine</tspan><tspan fill="#1f2328">(</tspan><tspan fill="#0a3069">"Fitxer buit"</tspan><tspan fill="#1f2328">);</tspan></text>
+  <text x="58.0" y="864.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">} </tspan><tspan fill="#8250df">else</tspan><tspan fill="#1f2328"> {</tspan></text>
+  <text x="58.0" y="885.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">    </tspan><tspan fill="#0550ae">double</tspan><tspan fill="#1f2328"> mitjana = (</tspan><tspan fill="#0550ae">double</tspan><tspan fill="#1f2328">)suma / quantitat;</tspan></text>
+  <text x="58.0" y="906.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">    Console.</tspan><tspan fill="#953800">WriteLine</tspan><tspan fill="#1f2328">(</tspan><tspan fill="#0a3069">$"Mitjana: {mitjana:0.00}"</tspan><tspan fill="#1f2328">);</tspan></text>
+  <text x="58.0" y="927.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">}</tspan></text>
   <!-- ===== Panell 2: Tres línies per element ===== -->
-  <clipPath id="panell1"><rect x="560.0" y="142" width="510.0" height="835" rx="14"/></clipPath>
-  <rect x="560.0" y="142.0" width="510.0" height="835.0" rx="14" fill="#fbfcfd"/>
-  <g clip-path="url(#panell1)"><rect x="560.0" y="142.0" width="510.0" height="56.0" fill="#24292f"/></g>
-  <rect x="560.0" y="142.0" width="510.0" height="835.0" rx="14" fill="none" stroke="#d0d7de" stroke-width="2"/>
-  <circle cx="591.0" cy="170.0" r="15" fill="#ffffff"/>
-  <text x="591.0" y="176.0" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#24292f" font-weight="700" text-anchor="middle">2</text>
-  <text x="618.0" y="177.0" font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#ffffff" font-weight="700">Tres línies per element</text>
-  <clipPath id="fitxer1"><rect x="576.0" y="214.0" width="190" height="170" rx="8"/></clipPath>
-  <rect x="576.0" y="214.0" width="190.0" height="170.0" rx="8" fill="#ffffff"/>
-  <g clip-path="url(#fitxer1)">
-  <rect x="576.0" y="214.0" width="190.0" height="22.0" fill="#f6f8fa"/>
-  <rect x="576.0" y="237.0" width="190.0" height="19.0" fill="#fff8c5"/>
-  <rect x="576.0" y="256.0" width="190.0" height="19.0" fill="#fbefff"/>
-  <rect x="576.0" y="275.0" width="190.0" height="19.0" fill="#fbefff"/>
-  <rect x="576.0" y="294.0" width="190.0" height="19.0" fill="#fbefff"/>
-  <rect x="576.0" y="313.0" width="190.0" height="19.0" fill="#f6f8fa"/>
-  <rect x="576.0" y="332.0" width="190.0" height="19.0" fill="#f6f8fa"/>
-  <rect x="576.0" y="351.0" width="190.0" height="19.0" fill="#f6f8fa"/>
+  <clipPath id="panell1"><rect x="560.0" y="180" width="510.0" height="823" rx="14"/></clipPath>
+  <rect x="560.0" y="180.0" width="510.0" height="823.0" rx="14" fill="#fbfcfd"/>
+  <g clip-path="url(#panell1)">
+  <rect x="560.0" y="180.0" width="510.0" height="56.0" rx="0" fill="#24292f"/>
   </g>
-  <line x1="576.0" y1="236.0" x2="766.0" y2="236.0" stroke="#d0d7de"/>
-  <rect x="576.0" y="214.0" width="190.0" height="170.0" rx="8" fill="none" stroke="#d0d7de" stroke-width="1"/>
-  <text x="586.0" y="230.0" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#57606a" font-weight="700">alumnes2.txt</text>
-  <text x="586.0" y="251.0" font-family="'Courier New', Courier, monospace" font-size="14" fill="#9a6700" font-weight="700">2</text>
-  <text x="606.0" y="250.0" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#9a6700">← quantitat</text>
-  <text x="586.0" y="270.0" font-family="'Courier New', Courier, monospace" font-size="14" fill="#1f2328">Anna</text>
-  <text x="586.0" y="289.0" font-family="'Courier New', Courier, monospace" font-size="14" fill="#1f2328">Garcia</text>
-  <text x="586.0" y="308.0" font-family="'Courier New', Courier, monospace" font-size="14" fill="#1f2328">7</text>
-  <text x="586.0" y="327.0" font-family="'Courier New', Courier, monospace" font-size="14" fill="#1f2328">Pau</text>
-  <text x="586.0" y="346.0" font-family="'Courier New', Courier, monospace" font-size="14" fill="#1f2328">Puig</text>
-  <text x="586.0" y="365.0" font-family="'Courier New', Courier, monospace" font-size="14" fill="#1f2328">5</text>
-  <rect x="780.0" y="214.0" width="183.6" height="28.0" rx="14" fill="#fff8c5" stroke="#d4a72c" stroke-width="1"/>
-  <text x="792.0" y="233.0" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#9a6700">Quantitat: 1a línia</text>
-  <text x="780.0" y="268.0" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#424a53">Cada alumne ocupa tres línies:</text>
-  <text x="780.0" y="289.0" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#424a53">nom, cognom i nota. La primera</text>
-  <text x="780.0" y="310.0" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#424a53">línia diu quants alumnes hi ha;</text>
-  <text x="780.0" y="331.0" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#424a53">a cada volta del for se'n llegeix un.</text>
-  <rect x="576.0" y="400.0" width="478.0" height="561.0" rx="8" fill="#f6f8fa"/>
-  <text x="588.0" y="427.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#6e7781" font-style="italic">// variables i constants</tspan></text>
-  <text x="588.0" y="448.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#8250df">const</tspan><tspan fill="#1f2328"> </tspan><tspan fill="#0550ae">string</tspan><tspan fill="#1f2328"> NOM_FITXER = </tspan><tspan fill="#0a3069">"alumnes2.txt"</tspan><tspan fill="#1f2328">;</tspan></text>
-  <text x="588.0" y="469.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#0550ae">int</tspan><tspan fill="#1f2328"> suma = </tspan><tspan fill="#0550ae">0</tspan><tspan fill="#1f2328">;</tspan></text>
-  <text x="588.0" y="511.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#6e7781" font-style="italic">// obrir el fitxer i llegir la quantitat d'elements</tspan></text>
-  <text x="588.0" y="532.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#0550ae">StreamReader</tspan><tspan fill="#1f2328"> sr = </tspan><tspan fill="#8250df">new</tspan><tspan fill="#1f2328"> </tspan><tspan fill="#0550ae">StreamReader</tspan><tspan fill="#1f2328">(NOM_FITXER);</tspan></text>
-  <rect x="576.0" y="538.0" width="478.0" height="21.0" fill="#ddf4ff"/>
-  <rect x="576.0" y="538.0" width="4.0" height="21.0" fill="#0969da"/>
-  <text x="588.0" y="553.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#0550ae">int</tspan><tspan fill="#1f2328"> quantitat = Convert.</tspan><tspan fill="#953800">ToInt32</tspan><tspan fill="#1f2328">(sr.</tspan><tspan fill="#953800">ReadLine</tspan><tspan fill="#1f2328">());</tspan></text>
-  <rect x="576.0" y="580.0" width="478.0" height="21.0" fill="#fff8c5"/>
-  <rect x="576.0" y="580.0" width="4.0" height="21.0" fill="#9a6700"/>
-  <text x="588.0" y="595.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#8250df">for</tspan><tspan fill="#1f2328"> (</tspan><tspan fill="#0550ae">int</tspan><tspan fill="#1f2328"> i = </tspan><tspan fill="#0550ae">0</tspan><tspan fill="#1f2328">; i &lt; quantitat; i = i + </tspan><tspan fill="#0550ae">1</tspan><tspan fill="#1f2328">) {</tspan></text>
-  <text x="588.0" y="616.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">    </tspan><tspan fill="#6e7781" font-style="italic">// llegir l'element (tres línies)</tspan></text>
-  <rect x="576.0" y="622.0" width="478.0" height="21.0" fill="#ddf4ff"/>
-  <rect x="576.0" y="622.0" width="4.0" height="21.0" fill="#0969da"/>
-  <text x="588.0" y="637.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">    </tspan><tspan fill="#0550ae">string</tspan><tspan fill="#1f2328"> nom = sr.</tspan><tspan fill="#953800">ReadLine</tspan><tspan fill="#1f2328">();</tspan></text>
-  <rect x="576.0" y="643.0" width="478.0" height="21.0" fill="#ddf4ff"/>
-  <rect x="576.0" y="643.0" width="4.0" height="21.0" fill="#0969da"/>
-  <text x="588.0" y="658.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">    </tspan><tspan fill="#0550ae">string</tspan><tspan fill="#1f2328"> cognom = sr.</tspan><tspan fill="#953800">ReadLine</tspan><tspan fill="#1f2328">();</tspan></text>
-  <rect x="576.0" y="664.0" width="478.0" height="21.0" fill="#ddf4ff"/>
-  <rect x="576.0" y="664.0" width="4.0" height="21.0" fill="#0969da"/>
-  <text x="588.0" y="679.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">    </tspan><tspan fill="#0550ae">int</tspan><tspan fill="#1f2328"> nota = Convert.</tspan><tspan fill="#953800">ToInt32</tspan><tspan fill="#1f2328">(sr.</tspan><tspan fill="#953800">ReadLine</tspan><tspan fill="#1f2328">());</tspan></text>
-  <text x="588.0" y="700.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">    </tspan><tspan fill="#6e7781" font-style="italic">// tractar l'element</tspan></text>
-  <rect x="576.0" y="706.0" width="478.0" height="21.0" fill="#dafbe1"/>
-  <rect x="576.0" y="706.0" width="4.0" height="21.0" fill="#1a7f37"/>
-  <text x="588.0" y="721.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">    suma = suma + nota;</tspan></text>
-  <text x="588.0" y="742.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">}</tspan></text>
-  <text x="588.0" y="763.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">sr.</tspan><tspan fill="#953800">Close</tspan><tspan fill="#1f2328">();</tspan></text>
-  <text x="588.0" y="805.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#6e7781" font-style="italic">// tractament final</tspan></text>
-  <text x="588.0" y="826.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#8250df">if</tspan><tspan fill="#1f2328"> (quantitat == </tspan><tspan fill="#0550ae">0</tspan><tspan fill="#1f2328">) {</tspan></text>
-  <text x="588.0" y="847.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">    Console.</tspan><tspan fill="#953800">WriteLine</tspan><tspan fill="#1f2328">(</tspan><tspan fill="#0a3069">"Fitxer buit"</tspan><tspan fill="#1f2328">);</tspan></text>
-  <text x="588.0" y="868.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">} </tspan><tspan fill="#8250df">else</tspan><tspan fill="#1f2328"> {</tspan></text>
-  <text x="588.0" y="889.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">    </tspan><tspan fill="#0550ae">double</tspan><tspan fill="#1f2328"> mitjana = (</tspan><tspan fill="#0550ae">double</tspan><tspan fill="#1f2328">)suma / quantitat;</tspan></text>
-  <text x="588.0" y="910.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">    Console.</tspan><tspan fill="#953800">WriteLine</tspan><tspan fill="#1f2328">(</tspan><tspan fill="#0a3069">$"Mitjana: {mitjana:0.00}"</tspan><tspan fill="#1f2328">);</tspan></text>
-  <text x="588.0" y="931.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">}</tspan></text>
+  <rect x="560.0" y="180.0" width="510.0" height="823.0" rx="14" fill="none" stroke="#d0d7de" stroke-width="2"/>
+  <circle cx="591.0" cy="208.0" r="15" fill="#ffffff"/>
+  <text x="591.0" y="214.0" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#24292f" font-weight="700" text-anchor="middle">2</text>
+  <text x="618.0" y="215.0" font-family="Arial, Helvetica, sans-serif" font-size="21" fill="#ffffff" font-weight="700">Tres línies per element</text>
+  <clipPath id="fitxer1"><rect x="576.0" y="252.0" width="200" height="170" rx="8"/></clipPath>
+  <rect x="576.0" y="252.0" width="200.0" height="170.0" rx="8" fill="#ffffff"/>
+  <g clip-path="url(#fitxer1)">
+  <rect x="576.0" y="252.0" width="200.0" height="22.0" rx="0" fill="#f6f8fa"/>
+  <rect x="576.0" y="275.0" width="200.0" height="19.0" rx="0" fill="#fff8c5"/>
+  <rect x="576.0" y="294.0" width="200.0" height="19.0" rx="0" fill="#fbefff"/>
+  <rect x="576.0" y="313.0" width="200.0" height="19.0" rx="0" fill="#fbefff"/>
+  <rect x="576.0" y="332.0" width="200.0" height="19.0" rx="0" fill="#fbefff"/>
+  <rect x="576.0" y="351.0" width="200.0" height="19.0" rx="0" fill="#eaeef2"/>
+  <rect x="576.0" y="370.0" width="200.0" height="19.0" rx="0" fill="#eaeef2"/>
+  <rect x="576.0" y="389.0" width="200.0" height="19.0" rx="0" fill="#eaeef2"/>
+  </g>
+  <line x1="576.0" y1="351.0" x2="776.0" y2="351.0" stroke="#afb8c1"/>
+  <line x1="576.0" y1="274.0" x2="776.0" y2="274.0" stroke="#d0d7de"/>
+  <rect x="576.0" y="252.0" width="200.0" height="170.0" rx="8" fill="none" stroke="#d0d7de" stroke-width="1"/>
+  <text x="586.0" y="268.0" font-family="Arial, Helvetica, sans-serif" font-size="13" fill="#57606a" font-weight="700">alumnes2.txt</text>
+  <text x="586.0" y="289.0" font-family="'Courier New', Courier, monospace" font-size="14" fill="#9a6700" font-weight="700">2</text>
+  <text x="604.4" y="288.0" font-family="Arial, Helvetica, sans-serif" font-size="12" fill="#9a6700">← quantitat</text>
+  <text x="586.0" y="308.0" font-family="'Courier New', Courier, monospace" font-size="14" fill="#1f2328">Anna</text>
+  <text x="586.0" y="327.0" font-family="'Courier New', Courier, monospace" font-size="14" fill="#1f2328">Garcia</text>
+  <text x="586.0" y="346.0" font-family="'Courier New', Courier, monospace" font-size="14" fill="#1f2328">7</text>
+  <text x="586.0" y="365.0" font-family="'Courier New', Courier, monospace" font-size="14" fill="#1f2328">Pau</text>
+  <text x="586.0" y="384.0" font-family="'Courier New', Courier, monospace" font-size="14" fill="#1f2328">Puig</text>
+  <text x="586.0" y="403.0" font-family="'Courier New', Courier, monospace" font-size="14" fill="#1f2328">5</text>
+  <rect x="790.0" y="252.0" width="189.3" height="28.0" rx="14" fill="#fff8c5" stroke="#d4a72c" stroke-width="1"/>
+  <text x="802.0" y="271.0" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" fill="#9a6700">Quantitat: 1a línia</text>
+  <text x="790.0" y="306.0" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#424a53">Cada alumne ocupa tres línies: nom,</text>
+  <text x="790.0" y="327.0" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#424a53">cognom i nota. La primera línia diu</text>
+  <text x="790.0" y="348.0" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#424a53">quants alumnes hi ha; a cada volta</text>
+  <text x="790.0" y="369.0" font-family="Arial, Helvetica, sans-serif" font-size="15" fill="#424a53">del for se'n llegeix un.</text>
+  <rect x="790.0" y="384.0" width="264.0" height="28.0" rx="6" fill="#1e293b"/>
+  <text x="800.0" y="403.0" font-family="'Courier New', Courier, monospace" font-size="14" fill="#e2e8f0">&gt; Mitjana: 6,00</text>
+  <rect x="576.0" y="438.0" width="478.0" height="549.0" rx="8" fill="#f6f8fa"/>
+  <text x="588.0" y="465.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#57606a" font-style="italic">// variables i constants</tspan></text>
+  <text x="588.0" y="486.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#8250df">const</tspan><tspan fill="#1f2328"> </tspan><tspan fill="#0550ae">string</tspan><tspan fill="#1f2328"> NOM_FITXER = </tspan><tspan fill="#0a3069">"alumnes2.txt"</tspan><tspan fill="#1f2328">;</tspan></text>
+  <text x="588.0" y="507.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#0550ae">int</tspan><tspan fill="#1f2328"> suma = </tspan><tspan fill="#0550ae">0</tspan><tspan fill="#1f2328">;</tspan></text>
+  <text x="588.0" y="549.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#57606a" font-style="italic">// obrir el fitxer i llegir la quantitat d'elements</tspan></text>
+  <text x="588.0" y="570.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#0550ae">StreamReader</tspan><tspan fill="#1f2328"> sr = </tspan><tspan fill="#8250df">new</tspan><tspan fill="#1f2328"> </tspan><tspan fill="#0550ae">StreamReader</tspan><tspan fill="#1f2328">(NOM_FITXER);</tspan></text>
+  <rect x="576.0" y="576.0" width="478.0" height="21.0" rx="0" fill="#ddf4ff"/>
+  <rect x="576.0" y="576.0" width="4.0" height="21.0" rx="0" fill="#0969da"/>
+  <text x="588.0" y="591.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#0550ae">int</tspan><tspan fill="#1f2328"> quantitat = Convert.</tspan><tspan fill="#953800">ToInt32</tspan><tspan fill="#1f2328">(sr.</tspan><tspan fill="#953800">ReadLine</tspan><tspan fill="#1f2328">());</tspan></text>
+  <rect x="576.0" y="618.0" width="478.0" height="21.0" rx="0" fill="#fff8c5"/>
+  <rect x="576.0" y="618.0" width="4.0" height="21.0" rx="0" fill="#9a6700"/>
+  <text x="588.0" y="633.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#8250df">for</tspan><tspan fill="#1f2328"> (</tspan><tspan fill="#0550ae">int</tspan><tspan fill="#1f2328"> i = </tspan><tspan fill="#0550ae">0</tspan><tspan fill="#1f2328">; i &lt; quantitat; i = i + </tspan><tspan fill="#0550ae">1</tspan><tspan fill="#1f2328">) {</tspan></text>
+  <text x="588.0" y="654.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">    </tspan><tspan fill="#57606a" font-style="italic">// llegir l'element (tres línies)</tspan></text>
+  <rect x="576.0" y="660.0" width="478.0" height="21.0" rx="0" fill="#ddf4ff"/>
+  <rect x="576.0" y="660.0" width="4.0" height="21.0" rx="0" fill="#0969da"/>
+  <text x="588.0" y="675.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">    </tspan><tspan fill="#0550ae">string</tspan><tspan fill="#1f2328"> nom = sr.</tspan><tspan fill="#953800">ReadLine</tspan><tspan fill="#1f2328">();</tspan></text>
+  <rect x="576.0" y="681.0" width="478.0" height="21.0" rx="0" fill="#ddf4ff"/>
+  <rect x="576.0" y="681.0" width="4.0" height="21.0" rx="0" fill="#0969da"/>
+  <text x="588.0" y="696.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">    </tspan><tspan fill="#0550ae">string</tspan><tspan fill="#1f2328"> cognom = sr.</tspan><tspan fill="#953800">ReadLine</tspan><tspan fill="#1f2328">();</tspan></text>
+  <rect x="576.0" y="702.0" width="478.0" height="21.0" rx="0" fill="#ddf4ff"/>
+  <rect x="576.0" y="702.0" width="4.0" height="21.0" rx="0" fill="#0969da"/>
+  <text x="588.0" y="717.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">    </tspan><tspan fill="#0550ae">int</tspan><tspan fill="#1f2328"> nota = Convert.</tspan><tspan fill="#953800">ToInt32</tspan><tspan fill="#1f2328">(sr.</tspan><tspan fill="#953800">ReadLine</tspan><tspan fill="#1f2328">());</tspan></text>
+  <text x="588.0" y="738.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">    </tspan><tspan fill="#57606a" font-style="italic">// tractar l'element</tspan></text>
+  <rect x="576.0" y="744.0" width="478.0" height="21.0" rx="0" fill="#dafbe1"/>
+  <rect x="576.0" y="744.0" width="4.0" height="21.0" rx="0" fill="#1a7f37"/>
+  <text x="588.0" y="759.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">    suma = suma + nota;</tspan></text>
+  <text x="588.0" y="780.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">}</tspan></text>
+  <text x="588.0" y="801.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">sr.</tspan><tspan fill="#953800">Close</tspan><tspan fill="#1f2328">();</tspan></text>
+  <text x="588.0" y="843.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#57606a" font-style="italic">// tractament final</tspan></text>
+  <text x="588.0" y="864.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#8250df">if</tspan><tspan fill="#1f2328"> (quantitat == </tspan><tspan fill="#0550ae">0</tspan><tspan fill="#1f2328">) {</tspan></text>
+  <text x="588.0" y="885.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">    Console.</tspan><tspan fill="#953800">WriteLine</tspan><tspan fill="#1f2328">(</tspan><tspan fill="#0a3069">"Fitxer buit"</tspan><tspan fill="#1f2328">);</tspan></text>
+  <text x="588.0" y="906.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">} </tspan><tspan fill="#8250df">else</tspan><tspan fill="#1f2328"> {</tspan></text>
+  <text x="588.0" y="927.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">    </tspan><tspan fill="#0550ae">double</tspan><tspan fill="#1f2328"> mitjana = (</tspan><tspan fill="#0550ae">double</tspan><tspan fill="#1f2328">)suma / quantitat;</tspan></text>
+  <text x="588.0" y="948.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">    Console.</tspan><tspan fill="#953800">WriteLine</tspan><tspan fill="#1f2328">(</tspan><tspan fill="#0a3069">$"Mitjana: {mitjana:0.00}"</tspan><tspan fill="#1f2328">);</tspan></text>
+  <text x="588.0" y="969.0" xml:space="preserve" font-family="'Courier New', Courier, monospace" font-size="13.5" fill="#1f2328"><tspan fill="#1f2328">}</tspan></text>
   <!-- ===== Peu: el patró ===== -->
-  <rect x="30.0" y="1001.0" width="1040.0" height="124.0" rx="14" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
-  <text x="550.0" y="1031.0" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#57606a" font-weight="700" text-anchor="middle">EL PATRÓ ÉS SEMPRE EL MATEIX</text>
-  <rect x="67.0" y="1047.0" width="228.0" height="36.0" rx="18" fill="#ddf4ff" stroke="#0969da" stroke-width="2"/>
-  <text x="181.0" y="1071.0" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#0969da" font-weight="700" text-anchor="middle">1. Llegir la quantitat</text>
-  <path d="M303.0 1065 H315.0" stroke="#57606a" stroke-width="2.5"/>
-  <path d="M313.0 1058 L325.0 1065 L313.0 1072 Z" fill="#57606a"/>
-  <rect x="331.0" y="1047.0" width="282.0" height="36.0" rx="18" fill="#fff8c5" stroke="#9a6700" stroke-width="2"/>
-  <text x="472.0" y="1071.0" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#9a6700" font-weight="700" text-anchor="middle">2. Repetir quantitat vegades</text>
-  <path d="M621.0 1065 H633.0" stroke="#57606a" stroke-width="2.5"/>
-  <path d="M631.0 1058 L643.0 1065 L631.0 1072 Z" fill="#57606a"/>
-  <rect x="649.0" y="1047.0" width="201.0" height="36.0" rx="18" fill="#ddf4ff" stroke="#0969da" stroke-width="2"/>
-  <text x="749.5" y="1071.0" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#0969da" font-weight="700" text-anchor="middle">3. Llegir l'element</text>
-  <path d="M858.0 1065 H870.0" stroke="#57606a" stroke-width="2.5"/>
-  <path d="M868.0 1058 L880.0 1065 L868.0 1072 Z" fill="#57606a"/>
-  <rect x="886.0" y="1047.0" width="147.0" height="36.0" rx="18" fill="#dafbe1" stroke="#1a7f37" stroke-width="2"/>
-  <text x="959.5" y="1071.0" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#1a7f37" font-weight="700" text-anchor="middle">4. Tractar-lo</text>
-  <text x="550.0" y="1107.0" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#57606a" text-anchor="middle">Els passos 3 i 4 es repeteixen tantes vegades com indica la quantitat.</text>
+  <rect x="30.0" y="1027.0" width="1040.0" height="124.0" rx="14" fill="#f6f8fa" stroke="#d0d7de" stroke-width="1"/>
+  <text x="550.0" y="1057.0" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#57606a" font-weight="700" text-anchor="middle">EL PATRÓ ÉS SEMPRE EL MATEIX</text>
+  <rect x="56.4" y="1073.0" width="225.8" height="36.0" rx="18" fill="#ddf4ff" stroke="#0969da" stroke-width="2"/>
+  <text x="169.3" y="1096.5" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#0969da" font-weight="700" text-anchor="middle">1. Llegir la quantitat</text>
+  <path d="M291.2 1091 H312.2" stroke="#57606a" stroke-width="2.5"/>
+  <path d="M309.2 1084 L320.2 1091 L309.2 1098 Z" fill="#57606a"/>
+  <rect x="328.2" y="1073.0" width="279.7" height="36.0" rx="18" fill="#fff8c5" stroke="#9a6700" stroke-width="2"/>
+  <text x="468.0" y="1096.5" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#9a6700" font-weight="700" text-anchor="middle">2. Repetir quantitat vegades</text>
+  <path d="M616.9 1091 H637.9" stroke="#57606a" stroke-width="2.5"/>
+  <path d="M634.9 1084 L645.9 1091 L634.9 1098 Z" fill="#57606a"/>
+  <rect x="653.9" y="1073.0" width="198.8" height="36.0" rx="18" fill="#ddf4ff" stroke="#0969da" stroke-width="2"/>
+  <text x="753.3" y="1096.5" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#0969da" font-weight="700" text-anchor="middle">3. Llegir l'element</text>
+  <path d="M861.7 1091 H882.7" stroke="#57606a" stroke-width="2.5"/>
+  <path d="M879.7 1084 L890.7 1091 L879.7 1098 Z" fill="#57606a"/>
+  <rect x="898.7" y="1073.0" width="144.9" height="36.0" rx="18" fill="#dafbe1" stroke="#1a7f37" stroke-width="2"/>
+  <text x="971.2" y="1096.5" font-family="Arial, Helvetica, sans-serif" font-size="15.5" fill="#1a7f37" font-weight="700" text-anchor="middle">4. Tractar-lo</text>
+  <text x="550.0" y="1133.0" font-family="Arial, Helvetica, sans-serif" font-size="14" fill="#57606a" text-anchor="middle">Els passos 3 i 4 es repeteixen tantes vegades com indica la quantitat.</text>
 </svg>
